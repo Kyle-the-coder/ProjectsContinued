@@ -3,14 +3,43 @@
   width: 100%;
   justify-content: center;
   border-bottom: 3px solid black;
+  position: relative;
 }
 
 .pane {
   flex: 1;
 }
 
-.right-pane {
+.scroll-pane-right {
   display: flex;
   justify-content: center;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  top: 0;
   background-color: rgb(102, 201, 199);
+  position: absolute;
+  animation: pane-size 3s ease-in-out;
+  transition: all 0.8s;
+}
+.scroll-pane-left {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  top: 0;
+  background-color: rgb(102, 201, 199);
+  position: absolute;
+  animation: pane-size 3s ease-in-out;
+  transition: all 0.8s;
+}
+
+@keyframes pane-size {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 50%;
+  }
 }

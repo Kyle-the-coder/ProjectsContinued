@@ -1,6 +1,6 @@
 import dancer from "../assets/dancer.mp4";
 import "../styles/pane.css";
-export default function LeftPane() {
+export default function RightPane2() {
   return (
     <>
       <video

@@ -6,7 +6,7 @@ export default function SplitScreen({ children }) {
     <>
       <div className="container">
         <div className="pane">{leftPane}</div>
-        <div className="pane">{rightPane}</div>
+        <div className="pane right-pane">{rightPane}</div>
       </div>
     </>
   );

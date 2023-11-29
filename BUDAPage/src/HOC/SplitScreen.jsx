@@ -1,10 +1,12 @@
-export function SplitScreen({ children }) {
+import "../styles/splitScreen.css";
+
+export default function SplitScreen({ children }) {
   const [leftPane, rightPane] = children;
   return (
     <>
       <div className="container">
-        <div className="left-pane">{leftPane}</div>
-        <div className="right-pane">{rightPane}</div>
+        <div className="pane">{leftPane}</div>
+        <div className="pane">{rightPane}</div>
       </div>
     </>
   );

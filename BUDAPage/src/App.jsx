@@ -1,11 +1,15 @@
-import { useState } from "react";
-import dancer from "./assets/dancer.mp4";
+import LeftPane from "./components/LeftPane";
+import RightPane from "./components/RightPane";
+import SplitScreen from "./HOC/SplitScreen";
 
 function App() {
   return (
-    <>
-      <video src={dancer} autoPlay muted controls={false} />
-    </>
+    <div className="main-container">
+      <SplitScreen>
+        <LeftPane />
+        <RightPane />
+      </SplitScreen>
+    </div>
   );
 }
 

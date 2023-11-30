@@ -1,16 +1,15 @@
 import logo from "../assets/logoDancer.png";
 import "../styles/pane.css";
-
+import boomBox from "../assets/boom-box.png";
 export default function HipHopDisplay() {
   return (
     <>
       <div className="right-pane-container">
         <div className="logo-container">
-          <img src={logo} className="logo" />
-          <p className="logo-">Welcome to Let It Out Co!</p>
+          <img src={boomBox} className="logo" />
         </div>
         <div className="right-pane-body">
-          <p>This is Dance!</p>
+          <p>This is Hip Hop!</p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque habitant morbi tristique senectus et netus et malesuada

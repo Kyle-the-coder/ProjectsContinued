@@ -1,7 +1,7 @@
 import logo from "../assets/logoDancer.png";
 import "../styles/pane.css";
 
-export default function WelcomeDisplay({ isEnter }) {
+export default function BreakDanceDisplay() {
   return (
     <>
       <div className="right-pane-container">
@@ -10,7 +10,7 @@ export default function WelcomeDisplay({ isEnter }) {
           <p className="logo-">Welcome to Let It Out Co!</p>
         </div>
         <div className="right-pane-body">
-          <p>This is Dance!</p>
+          <p>This is BreakDance!</p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque habitant morbi tristique senectus et netus et malesuada

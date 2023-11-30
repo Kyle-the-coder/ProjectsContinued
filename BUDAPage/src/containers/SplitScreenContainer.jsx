@@ -1,17 +1,35 @@
-import SplitScreen from "../HOC/SplitScreen";
+import SplitScreenDisplay from "../components/SplitScreenDisplay";
 
 export default function SplitScreenContainer({
-  Left,
-  Right,
-  isScrollLeft,
-  isScrollRight,
+  SlidableComp,
+  StillComp,
+  isScrollLeft = false,
+  isScrollRight = false,
+  bgColor,
 }) {
   return (
     <>
-      <SplitScreen right={isScrollRight} left={isScrollLeft}>
-        <Left />
-        <Right />
-      </SplitScreen>
+      {isScrollLeft && (
+        <SplitScreenDisplay
+          right={isScrollRight}
+          left={isScrollLeft}
+          bgColor={bgColor}
+        >
+          {" "}
+          <StillComp />
+          <SlidableComp />
+        </SplitScreenDisplay>
+      )}
+      {isScrollRight && (
+        <SplitScreenDisplay
+          right={isScrollRight}
+          left={isScrollLeft}
+          bgColor={bgColor}
+        >
+          <StillComp />
+          <SlidableComp />
+        </SplitScreenDisplay>
+      )}
     </>
   );
 }

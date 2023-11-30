@@ -1,7 +1,7 @@
 import logo from "../assets/logoDancer.png";
 import "../styles/pane.css";
 
-export default function LeftPane2() {
+export default function HipHopDisplay() {
   return (
     <>
       <div className="right-pane-container">

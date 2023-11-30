@@ -1,14 +1,16 @@
-import LeftPane2 from "./components/2LeftPane";
-import RightPane2 from "./components/2RightPane";
-import LeftPane from "./components/LeftPane";
-import RightPane from "./components/RightPane";
+import BreakDancerVid from "./components/BreakDancerVid";
+import WelcomeDisplay from "./components/WelcomeDisplay";
 import SplitScreenContainer from "./containers/SplitScreenContainer";
-import SplitScreen from "./HOC/SplitScreen";
 
 function App() {
   return (
     <div className="main-container">
-      <SplitScreenContainer Left={LeftPane} Right={RightPane} />
+      <SplitScreenContainer
+        Right={BreakDancerVid}
+        Left={WelcomeDisplay}
+        isScrollLeft={true}
+        isScrollRight={false}
+      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import logo from "../assets/logoDancer.png";
 import "../styles/pane.css";
 
-export default function RightPane({ isEnter }) {
+export default function WelcomeDisplay({ isEnter }) {
   return (
     <>
       <div className="right-pane-container">

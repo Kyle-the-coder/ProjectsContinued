@@ -8,6 +8,14 @@
 
 .pane {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  width: 120px;
+  padding: 10px;
 }
 
 .scroll-pane-right {
@@ -21,6 +29,16 @@
   position: absolute;
   animation: pane-size 3s ease-in-out;
   transition: all 0.8s;
+}
+.still-pane-right {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 10%0%;
+  right: 0;
+  top: 0;
+  background-color: rgb(102, 201, 199);
+  position: absolute;
 }
 .scroll-pane-left {
   display: flex;

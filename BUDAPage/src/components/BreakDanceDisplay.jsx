@@ -1,4 +1,4 @@
-import logo from "../assets/logoDancer.png";
+import breaker from "../assets/breakdance.png";
 import "../styles/pane.css";
 
 export default function BreakDanceDisplay() {
@@ -6,8 +6,7 @@ export default function BreakDanceDisplay() {
     <>
       <div className="right-pane-container">
         <div className="logo-container">
-          <img src={logo} className="logo" />
-          <p className="logo-">Welcome to Let It Out Co!</p>
+          <img src={breaker} className="logo" />
         </div>
         <div className="right-pane-body">
           <p>This is BreakDance!</p>

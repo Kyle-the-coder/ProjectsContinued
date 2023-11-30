@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "../styles/splitScreen.css";
 
 export default function SplitScreenDisplay({ children, left, right, bgColor }) {
-  const slidablePane = React.Children.toArray(children)[0];
-  const stillPane = React.Children.toArray(children)[1];
+  const [slidablePane, stillPane] = children;
   const [isEnter, setIsEnter] = useState(false);
+  console.log(slidablePane);
   console.log(stillPane);
   return (
     <>

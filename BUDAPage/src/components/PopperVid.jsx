@@ -8,6 +8,7 @@ export default function PopperVid() {
         src={popper}
         autoPlay
         muted
+        loop
         controls={false}
       />
     </>

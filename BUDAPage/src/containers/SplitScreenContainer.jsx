@@ -1,33 +1,34 @@
 import SplitScreenDisplay from "../components/SplitScreenDisplay";
 
 export default function SplitScreenContainer({
-  SlidableComp,
   StillComp,
+  SlidableComp,
   isScrollLeft = false,
   isScrollRight = false,
   bgColor,
 }) {
+  console.log(StillComp);
   return (
     <>
-      {isScrollLeft && (
+      {isScrollRight && (
         <SplitScreenDisplay
           right={isScrollRight}
+          left={!isScrollRight}
+          bgColor={bgColor}
+        >
+          <SlidableComp />
+          <StillComp />
+        </SplitScreenDisplay>
+      )}
+      {isScrollLeft && (
+        <SplitScreenDisplay
+          right={!isScrollLeft}
           left={isScrollLeft}
           bgColor={bgColor}
         >
           {" "}
           <SlidableComp />
           <StillComp />
-        </SplitScreenDisplay>
-      )}
-      {isScrollRight && (
-        <SplitScreenDisplay
-          right={isScrollRight}
-          left={isScrollLeft}
-          bgColor={bgColor}
-        >
-          <StillComp />
-          <SlidableComp />
         </SplitScreenDisplay>
       )}
     </>

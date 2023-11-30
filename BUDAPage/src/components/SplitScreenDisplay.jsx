@@ -2,13 +2,14 @@ import { useState } from "react";
 import "../styles/splitScreen.css";
 
 export default function SplitScreenDisplay({ children, left, right, bgColor }) {
-  const [leftPane, rightPane] = children;
+  const [slidablePane, stillPane] = children;
   const [isEnter, setIsEnter] = useState(false);
+  console.log(left);
   return (
     <>
       {right && (
         <div className="container">
-          <div className="pane">{leftPane}</div>
+          <div className="pane">{stillPane}</div>
 
           <div className="pane"></div>
 
@@ -18,7 +19,7 @@ export default function SplitScreenDisplay({ children, left, right, bgColor }) {
               right && isEnter ? "scroll-pane-right" : "still-pane-right"
             }`}
           >
-            {rightPane}
+            {slidablePane}
 
             <button className="btn" onClick={() => setIsEnter(true)}>
               Enter
@@ -34,7 +35,7 @@ export default function SplitScreenDisplay({ children, left, right, bgColor }) {
               left && isEnter ? "scroll-pane-left" : "still-pane-left"
             } `}
           >
-            {leftPane}
+            {stillPane}
 
             <button className="btn" onClick={() => setIsEnter(true)}>
               Enter
@@ -43,7 +44,7 @@ export default function SplitScreenDisplay({ children, left, right, bgColor }) {
 
           <div className="pane"></div>
 
-          <div className="pane">{rightPane}</div>
+          <div className="pane">{slidablePane}</div>
         </div>
       )}
     </>

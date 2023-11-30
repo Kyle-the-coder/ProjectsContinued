@@ -1,4 +1,4 @@
-import dancer from "../assets/dancer.mp4";
+import dancer from "../assets/dancer2.mp4";
 import "../styles/pane.css";
 export default function RightPane2() {
   return (
@@ -8,6 +8,7 @@ export default function RightPane2() {
         src={dancer}
         autoPlay
         muted
+        loop
         controls={false}
       />
     </>

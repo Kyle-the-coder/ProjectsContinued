@@ -7,15 +7,15 @@ import SplitScreen from "./HOC/SplitScreen";
 function App() {
   return (
     <div className="main-container">
-      <SplitScreen leftOrRight={true}>
+      <SplitScreen right={true} left={false}>
         <LeftPane />
         <RightPane />
       </SplitScreen>
-      <SplitScreen leftOrRight={false}>
+      <SplitScreen left={true} right={false}>
         <LeftPane2 />
         <RightPane2 />
       </SplitScreen>
-      <SplitScreen leftOrRight={true}>
+      <SplitScreen right={true} left={false}>
         <LeftPane />
         <RightPane />
       </SplitScreen>

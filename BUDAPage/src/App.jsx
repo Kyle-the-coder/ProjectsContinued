@@ -10,8 +10,14 @@ function App() {
       <SplitScreenContainer
         StillComp={PopperVid}
         SlidableComp={HipHopDisplay}
-        isScrollRight={true}
+        isScrollLeft={true}
         bgColor={"rgb(233, 247, 168)"}
+      />
+      <SplitScreenContainer
+        StillComp={BreakDancerVid}
+        SlidableComp={BreakDanceDisplay}
+        isScrollRight={true}
+        bgColor={"rgb(233, 207, 68)"}
       />
     </div>
   );

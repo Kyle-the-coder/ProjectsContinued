@@ -4,14 +4,13 @@ import "../styles/splitScreen.css";
 export default function SplitScreenDisplay({ children, left, right, bgColor }) {
   const [slidablePane, stillPane] = children;
   const [isEnter, setIsEnter] = useState(false);
-  console.log(slidablePane);
-  console.log(stillPane);
+  console.log("slide", typeof slidablePane);
+  console.log("still", stillPane);
   return (
     <>
       {right && (
         <div className="container">
           <div className="pane">{stillPane}</div>
-
           <div className="pane"></div>
 
           <div
@@ -44,7 +43,6 @@ export default function SplitScreenDisplay({ children, left, right, bgColor }) {
           </div>
 
           <div className="pane"></div>
-
           <div className="pane">{stillPane}</div>
         </div>
       )}

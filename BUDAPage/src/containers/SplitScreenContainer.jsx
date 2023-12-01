@@ -23,7 +23,6 @@ export default function SplitScreenContainer({
       )}
       {isScrollLeft && (
         <SplitScreenDisplay right={false} left={isScrollLeft} bgColor={bgColor}>
-          {" "}
           <SlidableComp />
           <StillComp />
         </SplitScreenDisplay>

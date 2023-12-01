@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import "../styles/splitScreen.css";
 
-export default function SplitScreenDisplay({ children, left, right, bgColor }) {
+export default function SplitScreenDisplay({
+  children,
+  left,
+  right,
+  bgColorEnd,
+  bgColorBeg,
+}) {
   const [slidablePane, stillPane] = children;
   const [isEnter, setIsEnter] = useState(false);
   console.log("slide", typeof slidablePane);
@@ -14,15 +20,15 @@ export default function SplitScreenDisplay({ children, left, right, bgColor }) {
           <div className="pane"></div>
 
           <div
-            style={{ backgroundColor: bgColor }}
+            style={{ backgroundColor: isEnter ? bgColorEnd : bgColorBeg }}
             className={`pane ${
               right && isEnter ? "scroll-pane-right" : "still-pane-right"
             }`}
           >
             {slidablePane}
 
-            <button className="btn" onClick={() => setIsEnter(true)}>
-              Enter
+            <button className="btn" onClick={() => setIsEnter(!isEnter)}>
+              {isEnter ? "Close" : "View"}
             </button>
           </div>
         </div>
@@ -30,15 +36,15 @@ export default function SplitScreenDisplay({ children, left, right, bgColor }) {
       {left && (
         <div className="container">
           <div
-            style={{ backgroundColor: bgColor }}
+            style={{ backgroundColor: isEnter ? bgColorEnd : bgColorBeg }}
             className={`pane ${
               left && isEnter ? "scroll-pane-left" : "still-pane-left"
             } `}
           >
             {slidablePane}
 
-            <button className="btn" onClick={() => setIsEnter(true)}>
-              Enter
+            <button className="btn" onClick={() => setIsEnter(!isEnter)}>
+              {isEnter ? "Close" : "View"}
             </button>
           </div>
 

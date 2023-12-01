@@ -5,7 +5,8 @@ export default function SplitScreenContainer({
   StillComp,
   isScrollLeft = false,
   isScrollRight = false,
-  bgColor,
+  bgColorEnd,
+  bgColorBeg,
 }) {
   console.log(isScrollLeft);
   console.log(SlidableComp);
@@ -15,14 +16,20 @@ export default function SplitScreenContainer({
         <SplitScreenDisplay
           right={isScrollRight}
           left={false}
-          bgColor={bgColor}
+          bgColorEnd={bgColorEnd}
+          bgColorBeg={bgColorBeg}
         >
           <SlidableComp />
           <StillComp />
         </SplitScreenDisplay>
       )}
       {isScrollLeft && (
-        <SplitScreenDisplay right={false} left={isScrollLeft} bgColor={bgColor}>
+        <SplitScreenDisplay
+          right={false}
+          left={isScrollLeft}
+          bgColorEnd={bgColorEnd}
+          bgColorBeg={bgColorBeg}
+        >
           <SlidableComp />
           <StillComp />
         </SplitScreenDisplay>

@@ -15,16 +15,16 @@ function App() {
         SlidableComp={HipHopDisplay}
         StillComp={PopperVid}
         isScrollLeft={true}
-        bgColorBeg={"black"}
+        bgColorBeg={"rgb(1, 1, 1)"}
         bgColorEnd={"gold"}
       />
-      <SplitScreenContainer
+      {/* <SplitScreenContainer
         SlidableComp={BreakDanceDisplay}
         StillComp={BreakDancerVid}
         isScrollRight={true}
         bgColorBeg={"gold"}
-        bgColorEnd={"black"}
-      />
+        bgColorEnd={"rgb(5, 5, 5)"}
+      /> */}
     </div>
   );
 }

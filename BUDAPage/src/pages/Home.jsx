@@ -16,10 +16,11 @@ export function Home() {
           controls={false}
         />
       </div>
+      <div class="vignette-overlay"></div>
       <div className="home-display-container">
         <div className="home-display-logo-container">
           <img src={logo} className="logo " />
-          <h1 className="my-3">Dance Technologies</h1>
+          <h1 className="my-3 f-5">Dance Technologies</h1>
           <p className="my-3">Movement and Capture Development</p>
         </div>
 

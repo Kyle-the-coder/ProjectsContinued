@@ -10,8 +10,7 @@ export default function SplitScreenDisplay({
 }) {
   const [slidablePane, stillPane] = children;
   const [isEnter, setIsEnter] = useState(false);
-  console.log("slide", typeof slidablePane);
-  console.log("still", stillPane);
+
   return (
     <>
       {right && (

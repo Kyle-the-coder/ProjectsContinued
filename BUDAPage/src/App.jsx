@@ -18,6 +18,13 @@ function App() {
         bgColorBeg={"black"}
         bgColorEnd={"gold"}
       />
+      <SplitScreenContainer
+        SlidableComp={BreakDanceDisplay}
+        StillComp={BreakDancerVid}
+        isScrollRight={true}
+        bgColorBeg={"gold"}
+        bgColorEnd={"black"}
+      />
     </div>
   );
 }

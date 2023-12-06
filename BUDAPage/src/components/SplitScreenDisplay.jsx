@@ -22,7 +22,11 @@ export default function SplitScreenDisplay({
             style={{ backgroundColor: isEnter ? bgColorEnd : bgColorBeg }}
             className={`pane ${
               right && isEnter ? "scroll-pane-right" : "still-pane-right"
-            }`}
+            } ${
+              bgColorEnd === "rgb(5, 5, 5)" && isEnter
+                ? "text-white"
+                : "text-black"
+            } `}
           >
             {slidablePane}
 
@@ -38,7 +42,9 @@ export default function SplitScreenDisplay({
             style={{ backgroundColor: isEnter ? bgColorEnd : bgColorBeg }}
             className={`pane ${
               left && isEnter ? "scroll-pane-left" : "still-pane-left"
-            } `}
+            }  ${
+              bgColorEnd === "gold" && isEnter ? "text-black" : "text-white"
+            }  `}
           >
             {slidablePane}
 

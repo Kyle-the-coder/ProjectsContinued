@@ -8,8 +8,6 @@ export default function SplitScreenContainer({
   bgColorEnd,
   bgColorBeg,
 }) {
-  console.log(isScrollLeft);
-  console.log(SlidableComp);
   return (
     <>
       {isScrollRight && (

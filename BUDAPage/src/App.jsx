@@ -3,17 +3,12 @@ import BreakDanceDisplay from "./components/BreakDanceDisplay";
 import PopperVid from "./components/PopperVid";
 import HipHopDisplay from "./components/PoppingDisplay";
 import SplitScreenContainer from "./containers/SplitScreenContainer";
+import { Home } from "./pages/Home";
 
 function App() {
   return (
     <div className="main-container">
-      <SplitScreenContainer
-        StillComp={PopperVid}
-        SlidableComp={HipHopDisplay}
-        isScrollLeft={true}
-        bgColorBeg={"rgb(174, 231, 109)"}
-        bgColorEnd={"rgb(233, 207, 68)"}
-      />
+      <Home />
       <SplitScreenContainer
         StillComp={BreakDancerVid}
         SlidableComp={BreakDanceDisplay}

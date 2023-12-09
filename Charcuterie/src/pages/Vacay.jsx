@@ -6,7 +6,7 @@ export function Vacay() {
       <div className="vacay-bg-container">
         <img className="vacay-bg-img" src={vacay} />
       </div>
-      <h1>Hello</h1>
+      <div className="vacay-display"></div>
     </div>
   );
 }

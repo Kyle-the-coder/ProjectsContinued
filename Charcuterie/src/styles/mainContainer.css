@@ -3,7 +3,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(1, 1, 1);
 }
 
 .main-container {
@@ -120,4 +119,25 @@ body {
 
 .f-5 {
   font-size: 2.5rem;
+}
+
+.vacay-container {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  background-color: bisque;
+  position: relative;
+  overflow: hidden;
+}
+
+.vacay-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.vacay-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

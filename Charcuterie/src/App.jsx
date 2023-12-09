@@ -4,11 +4,13 @@ import PopperVid from "./components/PopperVid";
 import HipHopDisplay from "./components/PoppingDisplay";
 import SplitScreenContainer from "./containers/SplitScreenContainer";
 import { Home } from "./pages/Home";
+import { Vacay } from "./pages/Vacay";
 import "./styles/mainContainer.css";
 
 function App() {
   return (
     <div className="main-container">
+      <Vacay />
       {/* <Home />
 
       <SplitScreenContainer

@@ -9,7 +9,7 @@ import "./styles/mainContainer.css";
 function App() {
   return (
     <div className="main-container">
-      <Home />
+      {/* <Home />
 
       <SplitScreenContainer
         SlidableComp={HipHopDisplay}
@@ -17,13 +17,6 @@ function App() {
         isScrollLeft={true}
         bgColorBeg={"rgb(1, 1, 1)"}
         bgColorEnd={"gold"}
-      />
-      {/* <SplitScreenContainer
-        SlidableComp={BreakDanceDisplay}
-        StillComp={BreakDancerVid}
-        isScrollRight={true}
-        bgColorBeg={"gold"}
-        bgColorEnd={"rgb(5, 5, 5)"}
       /> */}
     </div>
   );

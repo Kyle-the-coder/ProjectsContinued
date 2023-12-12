@@ -221,3 +221,23 @@ body {
   color: white;
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
 }
+
+.portfolio-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-top {
+  width: 100%;
+  height: 50%;
+  background-color: #297bb9;
+}
+
+.portfolio-bottom {
+  width: 100%;
+  height: 50%;
+  background-color: bisque;
+}

@@ -6,11 +6,13 @@ import SplitScreenContainer from "./containers/SplitScreenContainer";
 import { Home } from "./pages/Home";
 import { Vacay } from "./pages/Vacay";
 import "./styles/mainContainer.css";
+import { Portfolio } from "./pages/Portfolio";
 
 function App() {
   return (
     <div className="main-container">
-      <Vacay />
+      <Portfolio />
+      {/* <Vacay />
       <Home />
 
       <SplitScreenContainer
@@ -19,7 +21,7 @@ function App() {
         isScrollLeft={true}
         bgColorBeg={"rgb(1, 1, 1)"}
         bgColorEnd={"gold"}
-      />
+      /> */}
     </div>
   );
 }

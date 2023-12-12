@@ -10,3 +10,9 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "TheFam3";
+  src: url("./Kalnia_Expanded-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

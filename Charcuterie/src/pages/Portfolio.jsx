@@ -27,7 +27,7 @@ export function Portfolio() {
           </p>
           <div className="portfolio-bottom-display-button-container">
             <button className="portfolio-bottom-display-button">
-              View My Work
+              <p>View My Work</p>
               <img
                 src={rightArrow}
                 className="portfolio-bottom-display-button-png"

@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="main-container">
       <Portfolio />
-      {/* <Vacay />
+      <Vacay />
       <Home />
 
       <SplitScreenContainer
@@ -21,7 +21,7 @@ function App() {
         isScrollLeft={true}
         bgColorBeg={"rgb(1, 1, 1)"}
         bgColorEnd={"gold"}
-      /> */}
+      />
     </div>
   );
 }

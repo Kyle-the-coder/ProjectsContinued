@@ -124,7 +124,6 @@ body {
 .vacay-container {
   width: 100%;
   height: 800px;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   background-color: bisque;
@@ -225,11 +224,10 @@ body {
 .portfolio-container {
   margin-top: 20px;
   width: 100%;
-  height: 900px;
+  height: 950px;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 20px;
 }
 
 .portfolio-top {
@@ -256,8 +254,11 @@ body {
   display: flex;
   align-items: center;
   background-color: rgb(21, 21, 21);
-  border-top-left-radius: 2rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  margin-top: -20px;
 }
+
 .portfolio-bottom-display-container {
   width: 70%;
   display: flex;
@@ -281,10 +282,22 @@ body {
   width: 250px;
   height: 55px;
   padding: 10px;
+  background-color: rgb(255, 102, 0);
   border-radius: 2rem;
+  border: 3px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+
+.portfolio-bottom-display-button:hover {
+  background-color: whitesmoke;
+}
+.portfolio-bottom-display-button > p {
+  margin: 0 auto;
+  font-size: 1.1rem;
 }
 .portfolio-bottom-display-button-png {
   width: 15%;
@@ -312,7 +325,7 @@ body {
   position: absolute;
   top: 50%;
   right: 10%;
-  transform: translateY(-50%);
+  transform: translateY(-51%);
 }
 .portfolio-img {
   width: 100%;

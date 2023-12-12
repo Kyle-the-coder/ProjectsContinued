@@ -228,6 +228,7 @@ body {
   height: 800px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .portfolio-top {
@@ -240,4 +241,29 @@ body {
   width: 100%;
   height: 50%;
   background-color: bisque;
+}
+.portfolio-img-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+.portfolio-img {
+  width: 420px;
+  filter: grayscale(100%);
+}
+.portfolio-img-top-bar {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-start;
+  background-color: rgb(255, 102, 0);
+}
+.portfolio-img-top-bar-display {
+  margin: 0;
 }

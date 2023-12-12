@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.home-container {
+  width: 100%;
+  height: 800px;
+  background-color: rgb(1, 1, 1);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-video {
+  width: 100%;
+}
+
+.home-video-container {
+  width: 100%;
+  position: absolute;
+  top: -15%;
+  left: 20%;
+}
+.vignette-overlay {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(20, 20, 20, 0) 0%,
+
+    rgba(1, 1, 1, 0.8) 80%
+  );
+  pointer-events: none;
+}
+
+.home-display-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.home-display-logo-container {
+  font-family: "Hedvig Letters Sans", sans-serif;
+  width: 80%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 6%;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.my-3 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.home-button-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 200px;
+}
+
+.home-left-buttons-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.home-right-buttons-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.home-button {
+  font-family: "Hedvig Letters Sans", sans-serif;
+  width: 200px;
+  background-color: black;
+  border: 1px solid gold;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.home-button:hover {
+  background-color: gold;
+  color: black;
+}
+
+.f-5 {
+  font-size: 2.5rem;
+}
+
+.vacay-container {
+  width: 100%;
+  height: 800px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(138, 26, 182, 0.931) 0%,
+
+    rgba(118, 5, 5, 0.8) 100%
+  );
+}
+
+.vacay-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.vacay-bg-img {
+  width: 100%;
+
+  height: 100%;
+  object-fit: cover;
+}
+
+.vacay-display {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.vacay-display-intro {
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vacay-display-text {
+  margin: 0;
+  opacity: 0;
+  text-shadow: 2px 2px 3px #000 /* Right shadow */,
+    -2px 0 0 #000 /* Left shadow */, 2px 2px 10px #000 /* Bottom shadow */,
+    0 -2px 0 #000 /* Top shadow */;
+  transform: translateY(100%);
+  transition: opacity 1s, transform 1.5s;
+}
+
+.vacay-display-text.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.vacay-display-text.fam {
+  font-family: "TheFam", sans-serif;
+  font-size: 1.7rem;
+}
+.vacay-display-text.fam2 {
+  font-family: "TheFam2", sans-serif;
+  padding: 0px 20px;
+  font-size: 6rem;
+  text-shadow: 2px 2px 3px #000 /* Right shadow */,
+    -2px 0 0 #000 /* Left shadow */, 2px 2px 10px #000 /* Bottom shadow */,
+    0 -2px 0 #000 /* Top shadow */;
+  margin: 10px 0px 10px 0px;
+}
+
+.vacay-button {
+  opacity: 0;
+  margin-top: 40px;
+  background: transparent;
+  padding: 10px 40px;
+  border: 1px 1px black;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, opacity 1s;
+}
+.vacay-button.active {
+  opacity: 1;
+}
+
+.vacay-button:hover {
+  background-color: #297bb9;
+  color: white;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+}

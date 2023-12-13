@@ -222,7 +222,6 @@ body {
 }
 
 .portfolio-container {
-  margin-top: 20px;
   width: 100%;
   height: 950px;
   display: flex;
@@ -230,10 +229,17 @@ body {
   position: relative;
 }
 
+.portfolio-home-container {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+}
+
 .portfolio-top {
   width: 100%;
   height: 50%;
-  background-color: whitesmoke;
+  background-color: rgb(223, 219, 219);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -246,6 +252,15 @@ body {
 .portfolio-top-display-text {
   font-size: 4rem;
   font-family: "TheFam3", sans-serif;
+  transform: translateY(-100%);
+  opacity: 0;
+  margin: 0;
+  transition: all 1s;
+}
+
+.portfolio-top-display-text.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .portfolio-bottom {
@@ -256,11 +271,11 @@ body {
   background-color: rgb(21, 21, 21);
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
-  margin-top: -20px;
+  margin-top: -25px;
 }
 
 .portfolio-bottom-display-container {
-  width: 70%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -268,15 +283,28 @@ body {
 }
 .portfolio-bottom-display-text {
   color: white;
+  margin-right: 5%;
   width: 60%;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 1s;
+}
+.portfolio-bottom-display-text.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 .portfolio-bottom-display-button-container {
   width: 100%;
-  margin-left: 50%;
+  margin-left: 35%;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: all 1s;
+}
+.portfolio-bottom-display-button-container.active {
+  opacity: 1;
 }
 .portfolio-bottom-display-button {
   width: 250px;
@@ -293,7 +321,7 @@ body {
 }
 
 .portfolio-bottom-display-button:hover {
-  background-color: whitesmoke;
+  background-color: rgb(223, 219, 219);
 }
 .portfolio-bottom-display-button > p {
   margin: 0 auto;
@@ -324,8 +352,14 @@ body {
   justify-content: center;
   position: absolute;
   top: 50%;
-  right: 10%;
+  right: 0;
+  opacity: 0;
   transform: translateY(-51%);
+  transition: all 2s;
+}
+.portfolio-img-container.active {
+  opacity: 1;
+  right: 8%;
 }
 .portfolio-img {
   width: 100%;
@@ -343,7 +377,7 @@ body {
 }
 .portfolio-png-top-bar-display {
   width: 40px;
-  background-color: whitesmoke;
+  background-color: rgb(223, 219, 219);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -353,4 +387,51 @@ body {
 
 .portfolio-png {
   width: 100%;
+}
+
+.navbar-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(223, 219, 219);
+}
+.navbar-logo-container {
+  width: 30%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-logo-display-png {
+  width: 60px;
+}
+
+.navbar-logo-display-text {
+  font-size: 2.2rem;
+  font-family: "theFam", sans-serif;
+  margin-left: 10px;
+}
+.navbar-logo-display-text > span {
+  font-size: 1.8rem;
+  font-family: "theFam2", sans-serif;
+}
+
+.navbar-list-container {
+  width: 40%;
+}
+
+.navbar-list-option-container {
+  width: auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  margin-right: 6%;
+}
+
+.navbar-list-option {
+  margin: 0;
 }

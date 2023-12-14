@@ -491,3 +491,7 @@ body {
 .navbar-container.active .navbar-list-dropdown-container {
   z-index: 999;
 }
+
+.shop-right-container-img {
+  width: 500px;
+}

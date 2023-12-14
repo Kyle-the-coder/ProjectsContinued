@@ -7,11 +7,13 @@ import { Home } from "./pages/Home";
 import { Vacay } from "./pages/Vacay";
 import "./styles/mainContainer.css";
 import { Portfolio } from "./pages/Portfolio";
+import { Shop } from "./pages/Shop";
 
 function App() {
   return (
     <div className="main-container">
-      <Portfolio />
+      <Shop />
+      {/* <Portfolio />
       <Vacay />
       <Home />
 
@@ -21,7 +23,7 @@ function App() {
         isScrollLeft={true}
         bgColorBeg={"rgb(1, 1, 1)"}
         bgColorEnd={"gold"}
-      />
+      /> */}
     </div>
   );
 }

@@ -541,3 +541,7 @@ body {
   clip-path: ellipse(43% 55% at 45% 50%);
   object-position: 0px -275px;
 }
+
+.shop-left-container-img {
+  display: flex;
+}

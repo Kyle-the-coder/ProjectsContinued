@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="main-container">
       <Shop />
-      {/* <Portfolio />
+      <Portfolio />
       <Vacay />
       <Home />
 
@@ -23,7 +23,7 @@ function App() {
         isScrollLeft={true}
         bgColorBeg={"rgb(1, 1, 1)"}
         bgColorEnd={"gold"}
-      /> */}
+      />
     </div>
   );
 }

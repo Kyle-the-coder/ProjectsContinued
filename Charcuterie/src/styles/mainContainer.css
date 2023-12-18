@@ -501,45 +501,53 @@ body {
   width: 50%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(5 108 183);
+}
+.shop-left-title {
+  font-size: 6rem;
+  color: aliceblue;
+  font-family: "theFam", sans-serif;
+  text-align: center;
+  line-height: 0.8;
+  margin: 20px 0px 20px 0px;
+}
+.shop-left-logo-container {
+  display: flex;
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border-radius: 1.5rem;
+}
+
+.shop-left-logo-png {
+  width: 40px;
+  margin-right: 7px;
+}
+.shop-left-logo-title {
+  font-size: 0.8rem;
+  font-family: "theFam2", sans-serif;
+}
+.shop-left-clickable-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .shop-right-container {
   width: 50%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: rgb(5 108 183);
 }
-.shop-right-top-img-container {
-  display: flex;
-  width: 100%;
-  height: 50%;
-}
 
-.shop-right-top-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  clip-path: ellipse(50% 55% at 55% 49%);
-}
-.shop-right-bottom-img-container {
-  display: flex;
-  width: 100%;
-  height: 50%;
-}
-.shop-right-bottom-img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  clip-path: ellipse(43% 55% at 45% 50%);
-  object-position: 0px -275px;
+.shop-right-img {
+  clip-path: polygon(68% 100%, 100% 55%, 100% 0%, 1% 0%, 0% 100%);
 }
 
 .shop-left-container-img {

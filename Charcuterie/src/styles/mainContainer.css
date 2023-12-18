@@ -495,7 +495,7 @@ body {
   display: flex;
   align-items: center;
   height: 550px;
-  border: 10px solid orange;
+  border: 10px solid rgb(5 108 183);
 }
 .shop-left-container {
   width: 50%;
@@ -503,7 +503,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: rgb(5 108 183);
 }
 
 .shop-right-container {
@@ -513,7 +513,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: orange;
+  background-color: rgb(5 108 183);
 }
 .shop-right-top-img-container {
   display: flex;

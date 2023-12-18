@@ -521,6 +521,7 @@ body {
   align-items: center;
   width: 90%;
   border-radius: 1.5rem;
+  border: 2px solid black;
 }
 
 .shop-left-logo-png {
@@ -535,6 +536,25 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shop-left-button {
+  padding: 10px 20px 10px 20px;
+  border-radius: 1.5rem;
+  background-color: aliceblue;
+  font-family: "theFam", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.4s;
+  border: 2px solid black;
+  box-shadow: 2px 2px 4px black;
+}
+
+.shop-left-button:hover {
+  background-color: #198d53;
+  box-shadow: inset 2px 2px 3px rgb(50, 50, 50);
+  color: aliceblue;
 }
 
 .shop-right-container {
@@ -552,4 +572,17 @@ body {
 
 .shop-left-container-img {
   display: flex;
+}
+
+.shop-left-socials {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.shop-left-socials-png {
+  width: 30px;
+  cursor: pointer;
 }

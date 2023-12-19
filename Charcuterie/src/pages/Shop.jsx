@@ -5,6 +5,7 @@ import tik from "../assets/tiktok.png";
 import fb from "../assets/facebook2.png";
 import { gsap } from "gsap";
 import { useLayoutEffect, useState } from "react";
+import DotsContainer from "../components/DotsContainer";
 
 export function Shop() {
   const [isLoad, setIsLoad] = useState(false);
@@ -65,6 +66,7 @@ export function Shop() {
   }, [isLoad]);
   return (
     <div className="shop-main-container">
+      <DotsContainer />
       <div className="shop-left-container">
         <div className="shop-left-logo-container">
           <img src={logo} className="shop-left-logo-png" />

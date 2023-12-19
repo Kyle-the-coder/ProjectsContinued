@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Dot from "./Dot";
-import "./DotsContainer.css";
 
 const DotsContainer = () => {
   const [dots, setDots] = useState([]);
@@ -35,9 +34,9 @@ const DotsContainer = () => {
       );
     };
 
-    const animationFrame = requestAnimationFrame(() => {
+    const animationFrame = requestAnimationFrame(function animate() {
       updateDots();
-      animationFrame();
+      requestAnimationFrame(animate);
     });
 
     return () => cancelAnimationFrame(animationFrame);

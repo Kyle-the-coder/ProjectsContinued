@@ -12,6 +12,8 @@ import { Shop } from "./pages/Shop";
 function App() {
   return (
     <div className="main-container">
+      {/* <DotsContainer /> */}
+
       <Shop />
       <Portfolio />
       <Vacay />

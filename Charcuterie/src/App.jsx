@@ -17,13 +17,13 @@ function App() {
       <Vacay />
       <Home />
 
-      <SplitScreenContainer
+      {/* <SplitScreenContainer
         SlidableComp={HipHopDisplay}
         StillComp={PopperVid}
         isScrollLeft={true}
         bgColorBeg={"rgb(1, 1, 1)"}
         bgColorEnd={"gold"}
-      />
+      /> */}
     </div>
   );
 }

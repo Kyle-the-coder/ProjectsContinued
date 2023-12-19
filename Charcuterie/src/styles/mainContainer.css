@@ -8,13 +8,13 @@ body {
 .main-container {
   display: flex;
   flex-direction: column;
-  max-width: 1800px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
 .home-container {
   width: 100%;
-  height: 800px;
+  height: 500px;
   background-color: rgb(1, 1, 1);
   display: flex;
   position: relative;
@@ -218,7 +218,7 @@ body {
 
 .portfolio-container {
   width: 100%;
-  height: 950px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -245,7 +245,7 @@ body {
   margin-right: 30%;
 }
 .portfolio-top-display-text {
-  font-size: 4rem;
+  font-size: 2.8rem;
   font-family: "TheFam3", sans-serif;
   transform: translateY(-100%);
   opacity: 0;
@@ -280,6 +280,7 @@ body {
   color: white;
   margin-right: 5%;
   width: 60%;
+  font-size: 0.9rem;
   transform: translateY(100%);
   opacity: 0;
   transition: all 1s;
@@ -289,11 +290,12 @@ body {
   transform: translateY(0);
 }
 .portfolio-bottom-display-button-container {
-  width: 100%;
-  margin-left: 35%;
+  width: 150%;
+
+  margin-left: 25%;
   z-index: 1;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   opacity: 0;
   transition: all 1s;
@@ -302,9 +304,11 @@ body {
   opacity: 1;
 }
 .portfolio-bottom-display-button {
-  width: 250px;
+  width: 200px;
   height: 55px;
-  padding: 10px;
+  margin-left: 27%;
+  margin-right: 20px;
+  padding: 5px;
   background-color: rgb(255, 102, 0);
   border-radius: 2rem;
   border: 3px solid black;
@@ -320,27 +324,26 @@ body {
 }
 .portfolio-bottom-display-button > p {
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .portfolio-bottom-display-button-png {
   width: 15%;
 }
 
 .portfolio-bottom-display-png-arrow {
-  width: 200px;
-  margin-right: 40px;
-  margin-left: 40px;
+  width: 120px;
+  margin-right: 20px;
   filter: invert(100%);
 }
 .portfolio-bottom-display-png-squares {
-  width: 200px;
+  width: 180px;
 }
 .portfolio-bottom-display-png-squares-2 {
-  width: 200px;
+  width: 180px;
   transform: rotate(180deg);
 }
 .portfolio-img-container {
-  width: 630px;
+  width: 425px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -395,18 +398,19 @@ body {
   background-color: rgb(223, 219, 219);
 }
 .navbar-logo-container {
-  width: 23%;
+  width: 30%;
   margin-left: 20px;
   height: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0px 15px 0px 15px;
   transition: all 0.7s;
   cursor: pointer;
 }
 .navbar-logo-container:hover {
   background-color: rgb(255, 102, 0);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
 }
 
 .navbar-logo-display-png {
@@ -424,7 +428,7 @@ body {
 }
 
 .navbar-list-container {
-  width: 40%;
+  width: 45%;
 }
 
 .navbar-list-option-container {
@@ -493,6 +497,7 @@ body {
 }
 .shop-main-container {
   display: flex;
+  z-index: 999;
   align-items: center;
   height: 550px;
   border: 10px solid rgb(5 108 183);
@@ -589,4 +594,12 @@ body {
 .shop-left-socials-png {
   width: 30px;
   cursor: pointer;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #3498db; /* Dot color */
+  border-radius: 50%;
 }

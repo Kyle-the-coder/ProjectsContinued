@@ -1,0 +1,43 @@
+/* ImgGrid.css */
+
+.img-grid {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Adjust the number of columns as needed */
+  grid-template-rows: repeat(3, 1fr);
+  perspective: 1000px;
+  grid-gap: 10px;
+  transition: all 1s;
+}
+
+.img-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 1.8s;
+
+  transform: rotateY(-13deg) rotateX(15deg);
+}
+
+.img-grid img:hover {
+  transform: rotateY(0) rotateX(0);
+  opacity: 1;
+}
+
+.img-grid img:nth-child(4),
+.img-grid img:nth-child(5),
+.img-grid img:nth-child(6) {
+  margin-left: -15%;
+}
+
+.img-grid img:nth-child(7),
+.img-grid img:nth-child(8),
+.img-grid img:nth-child(9) {
+  margin-left: -30%;
+  margin-top: 10px;
+}

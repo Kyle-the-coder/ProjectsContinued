@@ -597,7 +597,7 @@ body {
   cursor: pointer;
 }
 
-.dot {
+/* .dot {
   position: absolute;
   width: 5px;
   height: 5px;
@@ -612,4 +612,34 @@ body {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
+} */
+
+/* BouncingDots.css */
+/* .dot-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(0, 0);
+} */
+
+.dots-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ensure the dots stay within the container */
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }

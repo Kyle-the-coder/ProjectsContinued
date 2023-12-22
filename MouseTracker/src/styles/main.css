@@ -11,7 +11,7 @@ body {
 .main-container {
   max-width: 1200px;
   background-color: rgb(43, 42, 42);
-  height: 800px;
+  height: 600px;
   margin: 0 auto;
   display: flex;
   justify-content: center;

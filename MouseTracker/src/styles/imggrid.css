@@ -1,17 +1,17 @@
-/* ImgGrid.css */
-
-.img-grid {
+.img-grid-container {
   width: 50%;
   height: 100%;
+}
+
+.img-grid {
+  width: 200px;
+  height: 250px;
   display: grid;
-  grid-template-columns: repeat(
-    3,
-    1fr
-  ); /* Adjust the number of columns as needed */
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
   perspective: 1000px;
   grid-gap: 10px;
-  transition: all 1s;
+  transition: transform 1s, opacity 1s;
 }
 
 .img-grid img {
@@ -20,7 +20,7 @@
   object-fit: cover;
   border-radius: 8px;
   transition: all 1.8s;
-
+  opacity: 30%;
   transform: rotateY(-13deg) rotateX(15deg);
 }
 
@@ -29,15 +29,16 @@
   opacity: 1;
 }
 
-.img-grid img:nth-child(4),
-.img-grid img:nth-child(5),
-.img-grid img:nth-child(6) {
-  margin-left: -15%;
+.img-grid img:nth-child(1) {
+  margin-left: 30px;
+  margin-top: 0;
 }
 
-.img-grid img:nth-child(7),
-.img-grid img:nth-child(8),
-.img-grid img:nth-child(9) {
-  margin-left: -30%;
-  margin-top: 10px;
+.img-grid img:nth-child(2) {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.img-grid img:nth-child(3) {
+  margin-top: 35px;
 }

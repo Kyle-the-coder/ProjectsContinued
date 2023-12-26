@@ -1,5 +1,5 @@
 // ImgGrid.js
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import axios from "axios";
 import gsap from "gsap";
 import "../styles/imggrid2.css";
@@ -8,9 +8,10 @@ const ImgGrid = () => {
   const [images1, setImages1] = useState([]);
   const [images2, setImages2] = useState([]);
   const [images3, setImages3] = useState([]);
-  const imgArr1 = ["Streets", "Tigers", "Skyscrapers"];
-  const imgArr2 = ["Sun", "Space", "Fire"];
-  const imgArr3 = ["Flowers", "Water", "Cyclone"];
+  const [loading, setLoading] = useState(true);
+  const imgArr1 = ["Streets", "Tigers", "Skyscrapers", "Portraits"];
+  const imgArr2 = ["Sun", "Space", "Fire", "Silly"];
+  const imgArr3 = ["Flowers", "Water", "Cyclone", "Love"];
 
   function findArr(arr) {
     const ranIndex = Math.floor(Math.random() * arr.length);
@@ -62,7 +63,9 @@ const ImgGrid = () => {
         setImages1(response1.data.photos);
         setImages2(response2.data.photos);
         setImages3(response3.data.photos);
+
         setTimeout(() => {
+          setLoading(false);
           gsap.to(".img-grid-display", {
             duration: 45.2,
             yPercent: -100,
@@ -75,7 +78,7 @@ const ImgGrid = () => {
             ease: "slow(0.3,0.4,false)",
             delay: 0.5,
           });
-        }, 1000);
+        }, 2000);
       } catch (error) {
         console.error("Error fetching data from Pexels API:", error);
       }
@@ -87,39 +90,56 @@ const ImgGrid = () => {
   return (
     <div className="img-grid-container">
       <div className="img-grid">
-        <div className="img-grid-display">
-          {images1.map((image) => (
-            <img
-              key={image.id}
-              id="forward"
-              src={image.src.medium}
-              alt={image.photographer}
-              className="img-display-img"
-            />
-          ))}
-        </div>
-        <div className="img-grid-display-reverse">
-          {images2.map((image) => (
-            <img
-              key={image.id}
-              id="reverse"
-              src={image.src.medium}
-              alt={image.photographer}
-              className="img-display-img"
-            />
-          ))}
-        </div>
-        <div className="img-grid-display">
-          {images3.map((image) => (
-            <img
-              key={image.id}
-              id="forward"
-              src={image.src.medium}
-              alt={image.photographer}
-              className="img-display-img"
-            />
-          ))}
-        </div>
+        {loading ? (
+          <div className="spinner">
+            {/* Create 18 card elements */}
+            {Array.from({ length: 18 }, (_, index) => (
+              <div key={index} className="spinner-card">
+                <div class="loader">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <>
+            <div className="img-grid-display">
+              {images1.map((image) => (
+                <img
+                  key={image.id}
+                  id="forward"
+                  src={image.src.medium}
+                  alt={image.photographer}
+                  className="img-display-img"
+                />
+              ))}
+            </div>
+            <div className="img-grid-display-reverse">
+              {images2.map((image) => (
+                <img
+                  key={image.id}
+                  id="reverse"
+                  src={image.src.medium}
+                  alt={image.photographer}
+                  className="img-display-img"
+                />
+              ))}
+            </div>
+            <div className="img-grid-display">
+              {images3.map((image) => (
+                <img
+                  key={image.id}
+                  id="forward"
+                  src={image.src.medium}
+                  alt={image.photographer}
+                  className="img-display-img"
+                />
+              ))}
+            </div>
+          </>
+        )}{" "}
       </div>
     </div>
   );

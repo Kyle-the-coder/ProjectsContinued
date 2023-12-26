@@ -16,6 +16,63 @@
   transition: transform 1s, opacity 1s;
   transform: rotateX(45deg) rotateY(15deg);
 }
+
+.spinner {
+  width: 200px;
+  height: 250px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 15px;
+  transition: transform 1s, opacity 1s;
+}
+.spinner-card {
+  width: 200px;
+  height: 250px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(131, 131, 207, 0.088);
+  border: 1px solid rgba(128, 0, 128, 0.387);
+  transform: translateY(-120%);
+  border-radius: 8px;
+}
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: 0.25s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: #ffff;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+}
 .img-grid-display,
 .img-grid-display-reverse {
   width: 200px;
@@ -39,13 +96,12 @@
   object-fit: cover;
   border-radius: 8px;
   transition: all 0.8s;
-  opacity: 30%;
   cursor: pointer;
+  opacity: 30%;
 }
 
 .img-display-img:hover {
-  opacity: 1;
-  opacity: 1;
   z-index: 999;
   transform: scale(1.1) rotateX(-15deg) rotateY(15deg);
+  opacity: 1;
 }

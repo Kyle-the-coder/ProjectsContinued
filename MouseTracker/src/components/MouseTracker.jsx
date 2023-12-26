@@ -20,10 +20,12 @@ const MouseTracker = () => {
     <div
       className="mouse-tracker"
       style={{
-        left: mousePosition.x - 14 + "px",
-        top: mousePosition.y - 13 + "px",
+        left: mousePosition.x - 15 + "px",
+        top: mousePosition.y - 14 + "px",
       }}
-    ></div>
+    >
+      <div className="mouse-tracker-dot"></div>
+    </div>
   );
 };
 

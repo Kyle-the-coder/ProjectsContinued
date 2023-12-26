@@ -8,4 +8,14 @@
   position: absolute;
   z-index: 999;
   pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mouse-tracker-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
 }

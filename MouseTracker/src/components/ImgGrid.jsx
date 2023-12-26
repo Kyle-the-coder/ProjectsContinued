@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import gsap from "gsap";
-import "../styles/imggrid.css";
+import "../styles/imggrid2.css";
 
 const ImgGrid = () => {
   const [images1, setImages1] = useState([]);
@@ -23,7 +23,7 @@ const ImgGrid = () => {
             Authorization: apiKey,
           },
           params: {
-            query: "Tigers",
+            query: "Bears",
             orientation: "portrait",
             per_page: 3,
           },
@@ -33,7 +33,7 @@ const ImgGrid = () => {
             Authorization: apiKey,
           },
           params: {
-            query: "Birds",
+            query: "Trees",
             orientation: "portrait",
             per_page: 3,
           },

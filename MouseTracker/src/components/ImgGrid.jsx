@@ -2,7 +2,7 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import axios from "axios";
 import gsap from "gsap";
-import "../styles/imggrid2.css";
+import "../styles/imggrid.css";
 
 const ImgGrid = () => {
   const [images1, setImages1] = useState([]);

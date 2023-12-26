@@ -29,3 +29,8 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.text-display-text {
+  font-family: "theFam", sans-serif;
+  font-size: 2rem;
+}

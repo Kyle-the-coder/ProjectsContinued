@@ -82,9 +82,6 @@
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 15px;
   transition: transform 1s, opacity 1s;
-  transform: translateY(-120%);
-}
-.img-grid-display-reverse {
   transform: translateY(-180%);
 }
 

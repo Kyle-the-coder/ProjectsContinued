@@ -95,10 +95,10 @@ const ImgGrid = () => {
             {/* Create 18 card elements */}
             {Array.from({ length: 18 }, (_, index) => (
               <div key={index} className="spinner-card">
-                <div class="loader">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
+                <div className="loader">
+                  <span className="bar"></span>
+                  <span className="bar"></span>
+                  <span className="bar"></span>
                 </div>
               </div>
             ))}

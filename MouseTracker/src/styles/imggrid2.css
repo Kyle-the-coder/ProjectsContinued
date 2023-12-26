@@ -34,8 +34,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(131, 131, 207, 0.088);
-  border: 1px solid rgba(128, 0, 128, 0.387);
+  background-color: rgba(134, 207, 131, 0.088);
+  border: 1px solid rgba(0, 128, 105, 0.387);
   transform: translateY(-120%);
   border-radius: 8px;
 }

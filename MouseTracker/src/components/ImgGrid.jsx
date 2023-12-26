@@ -8,7 +8,14 @@ const ImgGrid = () => {
   const [images1, setImages1] = useState([]);
   const [images2, setImages2] = useState([]);
   const [images3, setImages3] = useState([]);
-  const imgGridRef = useRef(null);
+  const imgArr1 = ["Streets", "Tigers", "Skyscrapers"];
+  const imgArr2 = ["Sun", "Space", "Fire"];
+  const imgArr3 = ["Flowers", "Water", "Cyclone"];
+
+  function findArr(arr) {
+    const ranIndex = Math.floor(Math.random() * arr.length);
+    return arr[ranIndex];
+  }
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -23,9 +30,9 @@ const ImgGrid = () => {
             Authorization: apiKey,
           },
           params: {
-            query: "Bears",
+            query: findArr(imgArr1),
             orientation: "portrait",
-            per_page: 3,
+            per_page: 6,
           },
         };
         const config2 = {
@@ -33,9 +40,9 @@ const ImgGrid = () => {
             Authorization: apiKey,
           },
           params: {
-            query: "Trees",
+            query: findArr(imgArr2),
             orientation: "portrait",
-            per_page: 3,
+            per_page: 6,
           },
         };
         const config3 = {
@@ -43,9 +50,9 @@ const ImgGrid = () => {
             Authorization: apiKey,
           },
           params: {
-            query: "Buildings",
+            query: findArr(imgArr3),
             orientation: "portrait",
-            per_page: 3,
+            per_page: 6,
           },
         };
         const response1 = await axios.get(apiUrl, config1);
@@ -56,17 +63,17 @@ const ImgGrid = () => {
         setImages2(response2.data.photos);
         setImages3(response3.data.photos);
         setTimeout(() => {
-          gsap.to("#forward", {
+          gsap.to(".img-grid-display", {
             duration: 45.2,
             yPercent: -100,
             ease: "slow(0.3,0.4,false)",
-            delay: 1,
+            delay: 0.5,
           });
           gsap.to(".img-grid-display-reverse", {
             duration: 45.2,
-            yPercent: 100,
+            yPercent: 80,
             ease: "slow(0.3,0.4,false)",
-            delay: 1,
+            delay: 0.5,
           });
         }, 1000);
       } catch (error) {
@@ -75,50 +82,41 @@ const ImgGrid = () => {
     };
 
     fetchImages();
-  }, []); // Run the effect only once on component mount
+  }, []);
 
   return (
-    <div className="img-grid-container" ref={imgGridRef}>
+    <div className="img-grid-container">
       <div className="img-grid">
         <div className="img-grid-display">
-          {images1.map((image, index) => (
+          {images1.map((image) => (
             <img
               key={image.id}
               id="forward"
               src={image.src.medium}
               alt={image.photographer}
-              style={{
-                "--column": index % 3,
-                "--row": Math.floor(index / 3),
-              }}
+              className="img-display-img"
             />
           ))}
         </div>
         <div className="img-grid-display-reverse">
-          {images2.map((image, index) => (
+          {images2.map((image) => (
             <img
               key={image.id}
               id="reverse"
               src={image.src.medium}
               alt={image.photographer}
-              style={{
-                "--column": index % 3,
-                "--row": Math.floor(index / 3),
-              }}
+              className="img-display-img"
             />
           ))}
         </div>
         <div className="img-grid-display">
-          {images3.map((image, index) => (
+          {images3.map((image) => (
             <img
               key={image.id}
               id="forward"
               src={image.src.medium}
               alt={image.photographer}
-              style={{
-                "--column": index % 3,
-                "--row": Math.floor(index / 3),
-              }}
+              className="img-display-img"
             />
           ))}
         </div>

@@ -31,7 +31,7 @@ const ImgGrid = () => {
             Authorization: apiKey,
           },
           params: {
-            query: findArr(imgArr1),
+            query: "Jewelry",
             orientation: "portrait",
             per_page: 6,
           },

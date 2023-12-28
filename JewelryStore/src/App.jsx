@@ -1,8 +1,16 @@
+import Banner from "./components/Banner";
+import dualRing from "./assets/dual-ring-display.jpg";
+import "./styles/main.css";
 function App() {
   return (
-    <>
-      <h1>hello</h1>
-    </>
+    <div className="main-container">
+      <Banner
+        img={dualRing}
+        title="Wedding Rings"
+        desc="Find the perfect ring for your love story"
+        side={false}
+      />
+    </div>
   );
 }
 

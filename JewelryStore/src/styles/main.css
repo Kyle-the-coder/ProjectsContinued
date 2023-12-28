@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.main-container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* UTILITY CLASSES */
+.m0 {
+  margin: 0;
+}

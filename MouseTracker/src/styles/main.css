@@ -43,6 +43,7 @@ body {
 }
 .text-display-text {
   font-size: 0.7rem;
+  z-index: 999;
 }
 .text-display-logo-container {
   display: flex;

@@ -14,11 +14,14 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 }
+
 .banner-img {
-  width: 100%;
+  width: 105%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
   z-index: -1;
 }
 
@@ -48,4 +51,6 @@
   margin: 0 3% 0 3%;
   color: white;
   font-family: "Font2", sans-serif;
+  text-shadow: 2px 2px 3px #000 /* Right shadow */,
+    2px 2px 10px #000 /* Bottom shadow */;
 }

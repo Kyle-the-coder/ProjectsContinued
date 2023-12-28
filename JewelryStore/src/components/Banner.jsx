@@ -1,14 +1,17 @@
 import { useState } from "react";
 import "../styles/banner.css";
 
-export default function Banner({ img, title, desc, side }) {
+export default function Banner({ img, title, desc, side, position }) {
   const [leftOrRight, setLeftOrRight] = useState(side);
 
   return (
     <div className="banner-main-container">
-      <div className="banner-img-container">
-        <img className="banner-img" src={img} />
-      </div>
+      <img
+        className="banner-img"
+        src={img}
+        style={{ objectPosition: position }}
+      />
+
       <div
         className={`${
           leftOrRight

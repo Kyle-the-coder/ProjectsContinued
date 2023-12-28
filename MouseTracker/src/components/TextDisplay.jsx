@@ -7,7 +7,9 @@ export function TextDisplay() {
         <p className="m0">DreamLens Studios</p>
       </div>
       <h1 className="text-display-title">Thomas WilderHall</h1>
-      <p className="text-display-text">Photographer, Motion Capture, Artist</p>
+      <p className="text-display-text">
+        Portraits, Landscape, Natue, and everything else!
+      </p>
     </div>
   );
 }

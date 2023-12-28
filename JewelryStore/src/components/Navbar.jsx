@@ -22,6 +22,8 @@ export default function Navbar() {
         <ul>
           <li>Engagement Rings</li>
           <li>Wedding Rings</li>
+          <li>Jewelry</li>
+          <li>Designers</li>
           <li>Services</li>
         </ul>
       </div>

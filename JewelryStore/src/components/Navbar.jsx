@@ -4,9 +4,11 @@ import insta from "../assets/instagram2.png";
 import fb from "../assets/facebook2.png";
 import { useEffect, useState } from "react";
 import gsap from "gsap";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [hoverIndex, setHoverIndex] = useState(null);
+  const navigate = useNavigate();
 
   const handleMouseEnter = (index) => {
     setHoverIndex(index);
@@ -17,11 +19,11 @@ export default function Navbar() {
   };
 
   const links = [
-    "Engagement Rings",
-    " Wedding Rings",
-    "Jewelry",
-    " Designers",
-    " Services",
+    { linkName: "Engagement Rings", link: "/engagement" },
+    { linkName: "Wedding Rings", link: "/wedding" },
+    { linkName: "Jewelry", link: "/jewelry" },
+    { linkName: " Designers", link: "/designers" },
+    { linkName: " Services", link: "/services" },
   ];
 
   useEffect(() => {
@@ -41,9 +43,9 @@ export default function Navbar() {
           <p className="font1">|</p>
           <p className="font1">Santa Clara</p>
         </div>
-        <div className="navbar-info-logo">
+        <div className="navbar-info-logo pointer" onClick={() => navigate("/")}>
           <img src={logo} />
-          <p className="f2">Timothy Patrick Jewelers</p>
+          <p className="f1-5">Timothy Patrick Jewelers</p>
           <p>Est. 2009</p>
         </div>
         <div className="navbar-info-socials">
@@ -56,12 +58,12 @@ export default function Navbar() {
           {links.map((link, index) => {
             return (
               <li
-                key={link}
+                key={link.linkName}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
-                <a className="navbar-link" href="/engagement">
-                  {link}
+                <a className="navbar-link" href={link.link}>
+                  {link.linkName}
                 </a>
                 {hoverIndex === index && <div className="active"></div>}
               </li>

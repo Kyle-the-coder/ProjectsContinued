@@ -1,16 +1,20 @@
 import { useState } from "react";
 import "../styles/banner.css";
 
-export default function Banner({ img, title, desc, side, position }) {
+export default function Banner({ img, video, title, desc, side, position }) {
   const [leftOrRight, setLeftOrRight] = useState(side);
 
   return (
-    <div className="banner-main-container">
-      <img
-        className="banner-img"
-        src={img}
-        style={{ objectPosition: position }}
-      />
+    <div className={`${img === null ? "video" : ""} banner-main-container `}>
+      {img === null ? (
+        <video src={video} className="banner-img" autoPlay muted loop />
+      ) : (
+        <img
+          className="banner-img"
+          src={img}
+          style={{ objectPosition: position }}
+        />
+      )}
 
       <div
         className={`${

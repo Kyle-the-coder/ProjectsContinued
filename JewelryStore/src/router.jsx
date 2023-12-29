@@ -1,25 +1,23 @@
 import { createBrowserRouter } from "react-router-dom";
-import Banner from "./components/Banner";
 import { NavLayout } from "./layouts/NavLayout";
-import dualRing from "./assets/rings-unique-display.jpg";
+import { landingRoute } from "./pages/LandingPage";
+import { engagementRoute } from "./pages/EngagementPage";
+import { ErrorLayout } from "./layouts/ErrorLayout";
+import { weddingRoute } from "./pages/WeddingPage";
+import { jewelryRoute } from "./pages/JewelryPage";
+import { designersRoute } from "./pages/DesignersPage";
 
 export const router = createBrowserRouter([
   {
+    path: "/",
     element: <NavLayout />,
-    errorElement: <h1>Error</h1>,
+    errorElement: <ErrorLayout />,
     children: [
-      {
-        path: "/",
-        element: (
-          <Banner
-            img={dualRing}
-            title="Rings For All"
-            desc="Stylish and Attractive rings for the Classy People"
-            side={true}
-            position="0 47%"
-          />
-        ),
-      },
+      { path: "/", ...landingRoute },
+      { path: "/engagement", ...engagementRoute },
+      { path: "/wedding", ...weddingRoute },
+      { path: "/jewelry", ...jewelryRoute },
+      { path: "/designers", ...designersRoute },
     ],
   },
 ]);

@@ -15,6 +15,9 @@ body {
 .f2 {
   font-size: 2rem;
 }
+.f1-5 {
+  font-size: 1.5rem;
+}
 
 .pointer {
   cursor: pointer;

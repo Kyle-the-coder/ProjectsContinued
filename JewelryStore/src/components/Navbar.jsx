@@ -60,7 +60,9 @@ export default function Navbar() {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
-                {link}
+                <a className="navbar-link" href="/engagement">
+                  {link}
+                </a>
                 {hoverIndex === index && <div className="active"></div>}
               </li>
             );

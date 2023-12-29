@@ -5,6 +5,8 @@
   overflow: hidden;
   position: relative;
   align-items: center;
+  border-radius: 0.5rem;
+  margin-bottom: 20px;
 }
 
 .banner-img-container {
@@ -41,15 +43,21 @@
   align-items: flex-end;
   justify-content: center;
 }
-
-.banner-info-container h1 {
+.banner-info-container-right h1 {
+  font-family: "Font2", sans-serif;
   font-size: 2.5rem;
   margin-bottom: 10px;
-  font-family: "Font1", sans-serif;
 }
+.banner-info-container-left h1 {
+  font-family: "Font2", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
 .banner-info {
   margin: 0 3% 0 3%;
   color: white;
+  font-size: 0.9rem;
   font-family: "Font2", sans-serif;
   text-shadow: 2px 2px 3px #000 /* Right shadow */,
     2px 2px 10px #000 /* Bottom shadow */;

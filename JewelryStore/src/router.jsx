@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Banner from "./components/Banner";
 import { NavLayout } from "./layouts/NavLayout";
-import dualRing from "./assets/dual-ring-display.jpg";
+import dualRing from "./assets/rings-unique-display.jpg";
 
 export const router = createBrowserRouter([
   {
@@ -13,10 +13,10 @@ export const router = createBrowserRouter([
         element: (
           <Banner
             img={dualRing}
-            title="Wedding Rings"
-            desc="Find the perfect ring for your love story"
-            side={false}
-            position="0 50%"
+            title="Rings For All"
+            desc="Stylish and Attractive rings for the Classy People"
+            side={true}
+            position="0 47%"
           />
         ),
       },

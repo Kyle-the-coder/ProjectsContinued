@@ -1,12 +1,10 @@
 body {
-  margin: 0;
   padding: 0;
-}
-.main-container {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  background-color: #aeaeae;
 }
 
 /* UTILITY CLASSES */
@@ -16,4 +14,8 @@ body {
 
 .f2 {
   font-size: 2rem;
+}
+
+.pointer {
+  cursor: pointer;
 }

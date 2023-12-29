@@ -3,6 +3,9 @@
   height: 250px;
   display: flex;
   flex-direction: column;
+  background-color: #eeeded;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .navbar-info-container {

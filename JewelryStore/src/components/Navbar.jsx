@@ -2,10 +2,12 @@ import "../styles/navbar.css";
 import logo from "../assets/j-store-logo.jpeg";
 import insta from "../assets/instagram2.png";
 import fb from "../assets/facebook2.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import gsap from "gsap";
 
 export default function Navbar() {
   const [hoverIndex, setHoverIndex] = useState(null);
+
   const handleMouseEnter = (index) => {
     setHoverIndex(index);
   };
@@ -13,6 +15,7 @@ export default function Navbar() {
   const handleMouseLeave = () => {
     setHoverIndex(null);
   };
+
   const links = [
     "Engagement Rings",
     " Wedding Rings",
@@ -20,6 +23,14 @@ export default function Navbar() {
     " Designers",
     " Services",
   ];
+
+  useEffect(() => {
+    gsap.from(".active", 0.8, {
+      scaleX: 0,
+      transformOrigin: "50% 50%",
+      ease: "power4.out",
+    });
+  }, [hoverIndex]);
   return (
     <nav className="navbar-main-container">
       <div className="navbar-info-container">
@@ -43,6 +54,7 @@ export default function Navbar() {
           {links.map((link, index) => {
             return (
               <li
+                key={link}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >

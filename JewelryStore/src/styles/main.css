@@ -19,3 +19,9 @@ body {
 .pointer {
   cursor: pointer;
 }
+
+.font1 {
+  font-family: "Font2", sans-serif;
+  cursor: pointer;
+  height: fit-content;
+}

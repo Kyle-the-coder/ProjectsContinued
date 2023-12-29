@@ -25,19 +25,21 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
-    gsap.from(".active", 0.8, {
-      scaleX: 0,
-      transformOrigin: "50% 50%",
-      ease: "power4.out",
-    });
+    if (hoverIndex !== null) {
+      gsap.from(".active", 0.8, {
+        scaleX: 0,
+        transformOrigin: "50% 50%",
+        ease: "power4.out",
+      });
+    }
   }, [hoverIndex]);
   return (
     <nav className="navbar-main-container">
       <div className="navbar-info-container">
         <div className="navbar-info-locations">
-          <p>Santa Rosa</p>
-          <p>|</p>
-          <p>Santa Clara</p>
+          <p className="font1">Santa Rosa</p>
+          <p className="font1">|</p>
+          <p className="font1">Santa Clara</p>
         </div>
         <div className="navbar-info-logo">
           <img src={logo} />

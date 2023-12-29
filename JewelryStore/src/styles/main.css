@@ -19,6 +19,10 @@ body {
   font-size: 1.5rem;
 }
 
+.f-8 {
+  font-size: 0.8rem;
+}
+
 .pointer {
   cursor: pointer;
 }

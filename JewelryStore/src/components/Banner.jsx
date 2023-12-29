@@ -1,9 +1,6 @@
-import { useState } from "react";
 import "../styles/banner.css";
 
 export default function Banner({ img, video, title, desc, side, position }) {
-  const [leftOrRight, setLeftOrRight] = useState(side);
-
   return (
     <div
       className={`${img === null ? "video" : ""} banner-main-container ${

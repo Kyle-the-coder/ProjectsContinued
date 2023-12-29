@@ -7,7 +7,7 @@ function WeddingPage() {
         img={rings}
         title="Wedding Rings"
         desc="Symbolizing Forever in Every Ring."
-        side={true}
+        side={false}
         position="0 47%"
       />
       <div></div>

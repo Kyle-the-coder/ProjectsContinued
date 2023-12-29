@@ -5,7 +5,11 @@ export default function Banner({ img, video, title, desc, side, position }) {
   const [leftOrRight, setLeftOrRight] = useState(side);
 
   return (
-    <div className={`${img === null ? "video" : ""} banner-main-container `}>
+    <div
+      className={`${img === null ? "video" : ""} banner-main-container ${
+        !side && "right"
+      } `}
+    >
       {img === null ? (
         <video src={video} className="banner-img" autoPlay muted loop />
       ) : (
@@ -16,13 +20,7 @@ export default function Banner({ img, video, title, desc, side, position }) {
         />
       )}
 
-      <div
-        className={`${
-          leftOrRight
-            ? "banner-info-container-left"
-            : "banner-info-container-right"
-        }`}
-      >
+      <div className="banner-info-container">
         <h1 className="banner-info">{title}</h1>
         <p className="banner-info">{desc}</p>
       </div>

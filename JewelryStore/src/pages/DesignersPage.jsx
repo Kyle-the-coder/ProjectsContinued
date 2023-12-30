@@ -7,7 +7,7 @@ function DesignersPage() {
         img={greenRing}
         title="Designers"
         desc="At the intersection of imagination and expertise, our designers bring you jewelry that transcends the ordinary. Uncover the beauty of our thoughtfully crafted designs."
-        side={false}
+        side={true}
         position="0 47%"
       />
       <div></div>

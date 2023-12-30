@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import rings from "../assets/rings-display.jpg";
+import rings from "../assets/wedding-rings-display.jpg";
 function WeddingPage() {
   return (
     <div className="landing-main-container">
@@ -8,7 +8,7 @@ function WeddingPage() {
         title="Wedding Rings"
         desc="Symbolizing Forever in Every Ring."
         side={false}
-        position="0 47%"
+        position="0 27%"
       />
       <div></div>
     </div>

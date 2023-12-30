@@ -17,8 +17,17 @@ export default function Banner({ img, video, title, desc, side, position }) {
         />
       )}
 
-      <div className="banner-info-container">
-        <h1 className="banner-info">{title}</h1>
+      <div
+        className={`${
+          img === null ? "banner-info-container-vid" : "banner-info-container"
+        }`}
+        style={{ alignItems: side ? "flex-start" : "flex-end" }}
+      >
+        <h1
+          className={`${img === null ? "banner-info-vid" : "banner-info plus"}`}
+        >
+          {title}
+        </h1>
         <p className="banner-info">{desc}</p>
       </div>
     </div>

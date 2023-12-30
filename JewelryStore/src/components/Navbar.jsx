@@ -61,7 +61,7 @@ export default function Navbar() {
       setIsDesignerDropdownActive(false);
       setIsServiceDropdownActive(false);
       const dropdownTop = 162;
-      const dropdownLeft = index * 17;
+      const dropdownLeft = index * 16.1;
       setOurCompanyDropdownPosition({ top: dropdownTop, left: dropdownLeft });
       // ENGAGEMENT:
     } else if (link === "Engagement Rings") {
@@ -122,7 +122,11 @@ export default function Navbar() {
   }, [hoverIndex]);
 
   useEffect(() => {
-    if (isDesignerDropdownActive || isServiceDropdownActive) {
+    if (
+      isDesignerDropdownActive ||
+      isServiceDropdownActive ||
+      isOurCompanyDropdownActive
+    ) {
       gsap.from(dropdownRef.current, {
         height: 0,
         opacity: 0,
@@ -215,7 +219,7 @@ export default function Navbar() {
         renderDropdown(servicesDropdownOptions, serviceDropdownPosition)}
       {isOurCompanyDropdownActive &&
         dropdownOption === "Our Company" &&
-        renderDropdown(servicesDropdownOptions, serviceDropdownPosition)}
+        renderDropdown(ourCompanyDropdownOptions, ourCompanyDropdownPosition)}
     </>
   );
 }

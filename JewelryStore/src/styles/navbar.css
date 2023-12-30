@@ -3,7 +3,7 @@
   height: 170px;
   display: flex;
   flex-direction: column;
-  background-color: #eeeded;
+  background-color: #ffffff;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   position: fixed;
@@ -105,7 +105,7 @@
   display: flex;
   justify-content: center;
   border-radius: 1rem;
-  background-color: #eeeded;
+  background-color: #ffffff;
   position: absolute;
   overflow: hidden;
   z-index: 999;

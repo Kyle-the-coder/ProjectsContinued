@@ -45,7 +45,7 @@ export default function Navbar() {
       setIsServiceDropdownActive(false);
       setIsOurCompanyDropdownActive(false);
       const dropdownTop = 162;
-      const dropdownLeft = index * 18.9;
+      const dropdownLeft = index * 18.8;
       setDesignerDropdownPosition({ top: dropdownTop, left: dropdownLeft });
       // SERVICES:
     } else if (link === "Services") {
@@ -61,7 +61,7 @@ export default function Navbar() {
       setIsDesignerDropdownActive(false);
       setIsServiceDropdownActive(false);
       const dropdownTop = 162;
-      const dropdownLeft = index * 16.8;
+      const dropdownLeft = index * 16.7;
       setOurCompanyDropdownPosition({ top: dropdownTop, left: dropdownLeft });
       // ENGAGEMENT:
     } else if (link === "Engagement Rings") {
@@ -180,6 +180,7 @@ export default function Navbar() {
               navigate("/");
               setIsDesignerDropdownActive(false);
               setIsServiceDropdownActive(false);
+              setIsOurCompanyDropdownActive(false);
             }}
           >
             <img src={logo} />
@@ -201,6 +202,7 @@ export default function Navbar() {
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
                   onClick={() => handleDropdownClick(link.linkName, index)}
+                  ref={dropdownRef}
                 >
                   {link.linkName}
 
@@ -210,16 +212,16 @@ export default function Navbar() {
             })}
           </ul>
         </div>
+        {isDesignerDropdownActive &&
+          dropdownOption === "Designers" &&
+          renderDropdown(designersDropdownOptions, designerDropdownPosition)}
+        {isServiceDropdownActive &&
+          dropdownOption === "Services" &&
+          renderDropdown(servicesDropdownOptions, serviceDropdownPosition)}
+        {isOurCompanyDropdownActive &&
+          dropdownOption === "Our Company" &&
+          renderDropdown(ourCompanyDropdownOptions, ourCompanyDropdownPosition)}
       </nav>
-      {isDesignerDropdownActive &&
-        dropdownOption === "Designers" &&
-        renderDropdown(designersDropdownOptions, designerDropdownPosition)}
-      {isServiceDropdownActive &&
-        dropdownOption === "Services" &&
-        renderDropdown(servicesDropdownOptions, serviceDropdownPosition)}
-      {isOurCompanyDropdownActive &&
-        dropdownOption === "Our Company" &&
-        renderDropdown(ourCompanyDropdownOptions, ourCompanyDropdownPosition)}
     </>
   );
 }

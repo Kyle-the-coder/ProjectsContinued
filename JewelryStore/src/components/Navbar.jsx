@@ -37,12 +37,6 @@ export default function Navbar() {
     if (link === "Designers") {
       setIsDesignerDropdownActive(true);
       setIsServiceDropdownActive(false);
-      // gsap.from(dropdownRef.current, {
-      //   y: "0%",
-      //   opacity: 1,
-      //   duration: 0.8,
-      //   ease: "power4.out",
-      // });
       const dropdownTop = 162;
       const dropdownLeft = index * 22.1;
       setDesignerDropdownPosition({ top: dropdownTop, left: dropdownLeft });
@@ -66,14 +60,6 @@ export default function Navbar() {
       navigate("/jewelry");
     }
   };
-
-  function handleDropdownReturn() {
-    setDropdownOption("");
-    setTimeout(() => {
-      setIsDesignerDropdownActive(false);
-      setIsServiceDropdownActive(false);
-    }, 600);
-  }
 
   const links = [
     { linkName: "Engagement Rings", link: "/engagement" },
@@ -158,7 +144,11 @@ export default function Navbar() {
           </div>
           <div
             className="navbar-info-logo pointer"
-            onClick={() => navigate("/")}
+            onClick={() => {
+              navigate("/");
+              setIsDesignerDropdownActive(false);
+              setIsServiceDropdownActive(false);
+            }}
           >
             <img src={logo} />
             <p className="f1-5">Timothy Patrick Jewelers</p>

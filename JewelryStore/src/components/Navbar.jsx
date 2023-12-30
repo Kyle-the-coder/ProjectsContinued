@@ -45,7 +45,7 @@ export default function Navbar() {
       setIsServiceDropdownActive(false);
       setIsOurCompanyDropdownActive(false);
       const dropdownTop = 162;
-      const dropdownLeft = index * 18.6;
+      const dropdownLeft = index * 18.9;
       setDesignerDropdownPosition({ top: dropdownTop, left: dropdownLeft });
       // SERVICES:
     } else if (link === "Services") {
@@ -53,7 +53,7 @@ export default function Navbar() {
       setIsDesignerDropdownActive(false);
       setIsOurCompanyDropdownActive(false);
       const dropdownTop = 162;
-      const dropdownLeft = index * 17;
+      const dropdownLeft = index * 17.5;
       setServiceDropdownPosition({ top: dropdownTop, left: dropdownLeft });
       // OUR COMPANY:
     } else if (link === "Our Company") {
@@ -61,7 +61,7 @@ export default function Navbar() {
       setIsDesignerDropdownActive(false);
       setIsServiceDropdownActive(false);
       const dropdownTop = 162;
-      const dropdownLeft = index * 16.1;
+      const dropdownLeft = index * 16.8;
       setOurCompanyDropdownPosition({ top: dropdownTop, left: dropdownLeft });
       // ENGAGEMENT:
     } else if (link === "Engagement Rings") {

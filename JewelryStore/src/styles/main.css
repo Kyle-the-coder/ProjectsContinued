@@ -11,6 +11,10 @@ body {
   margin: 0 auto;
   position: relative;
 }
+.main-container,
+.navbar-main-container {
+  box-sizing: border-box;
+}
 
 /* UTILITY CLASSES */
 .m0 {

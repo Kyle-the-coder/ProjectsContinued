@@ -5,7 +5,7 @@ export function ErrorLayout() {
   return (
     <div className="main-container">
       <Navbar />
-      <h1>Error</h1>
+      <h1 style={{ marginTop: "180px" }}>Error</h1>
     </div>
   );
 }

@@ -1,0 +1,38 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #aeaeae;
+}
+
+.main-container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* UTILITY CLASSES */
+.m0 {
+  margin: 0;
+}
+
+.f2 {
+  font-size: 2rem;
+}
+.f1-5 {
+  font-size: 1.5rem;
+}
+
+.f-8 {
+  font-size: 0.8rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.font1 {
+  font-family: "Font2", sans-serif;
+  cursor: pointer;
+  height: fit-content;
+}

@@ -10,11 +10,17 @@ export default function Navbar() {
   const [isDesignerDropdownActive, setIsDesignerDropdownActive] =
     useState(false);
   const [isServiceDropdownActive, setIsServiceDropdownActive] = useState(false);
+  const [isOurCompanyDropdownActive, setIsOurCompanyDropdownActive] =
+    useState(false);
   const [designerDropdownPosition, setDesignerDropdownPosition] = useState({
     top: 0,
     left: 0,
   });
   const [serviceDropdownPosition, setServiceDropdownPosition] = useState({
+    top: 0,
+    left: 0,
+  });
+  const [ourCompanyDropdownPosition, setOurCompanyDropdownPosition] = useState({
     top: 0,
     left: 0,
   });
@@ -33,35 +39,45 @@ export default function Navbar() {
 
   const handleDropdownClick = (link, index) => {
     setDropdownOption(link);
-
+    // DESIGNERS:
     if (link === "Designers") {
       setIsDesignerDropdownActive(true);
       setIsServiceDropdownActive(false);
+      setIsOurCompanyDropdownActive(false);
       const dropdownTop = 162;
       const dropdownLeft = index * 18.6;
       setDesignerDropdownPosition({ top: dropdownTop, left: dropdownLeft });
+      // SERVICES:
     } else if (link === "Services") {
       setIsServiceDropdownActive(true);
       setIsDesignerDropdownActive(false);
+      setIsOurCompanyDropdownActive(false);
       const dropdownTop = 162;
       const dropdownLeft = index * 17;
       setServiceDropdownPosition({ top: dropdownTop, left: dropdownLeft });
+      // OUR COMPANY:
+    } else if (link === "Our Company") {
+      setIsOurCompanyDropdownActive(true);
+      setIsDesignerDropdownActive(false);
+      setIsServiceDropdownActive(false);
+      const dropdownTop = 162;
+      const dropdownLeft = index * 17;
+      setOurCompanyDropdownPosition({ top: dropdownTop, left: dropdownLeft });
+      // ENGAGEMENT:
     } else if (link === "Engagement Rings") {
       setIsDesignerDropdownActive(false);
       setIsServiceDropdownActive(false);
       navigate("/engagement");
+      //WEDDING:
     } else if (link === "Wedding Rings") {
       setIsDesignerDropdownActive(false);
       setIsServiceDropdownActive(false);
       navigate("/wedding");
+      //JEWELRY:
     } else if (link === "Jewelry") {
       setIsDesignerDropdownActive(false);
       setIsServiceDropdownActive(false);
       navigate("/jewelry");
-    } else if (link === "Our Company") {
-      setIsDesignerDropdownActive(false);
-      setIsServiceDropdownActive(false);
-      navigate("/company");
     }
   };
 
@@ -86,6 +102,13 @@ export default function Navbar() {
     { linkName: "Appraisals", link: "/appraisals" },
     { linkName: "Custom Jewelry", link: "/custom" },
     { linkName: "Jewelry Repair", link: "/repair" },
+  ];
+
+  const ourCompanyDropdownOptions = [
+    { linkName: "Our Company", link: "/company" },
+    { linkName: "Blog", link: "/blog" },
+    { linkName: "Reviews", link: "/reviews" },
+    { linkName: "Contact Us", link: "/contact" },
   ];
 
   useEffect(() => {
@@ -189,6 +212,9 @@ export default function Navbar() {
         renderDropdown(designersDropdownOptions, designerDropdownPosition)}
       {isServiceDropdownActive &&
         dropdownOption === "Services" &&
+        renderDropdown(servicesDropdownOptions, serviceDropdownPosition)}
+      {isOurCompanyDropdownActive &&
+        dropdownOption === "Our Company" &&
         renderDropdown(servicesDropdownOptions, serviceDropdownPosition)}
     </>
   );

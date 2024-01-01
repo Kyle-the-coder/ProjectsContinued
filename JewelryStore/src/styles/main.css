@@ -20,7 +20,16 @@ body {
 .m0 {
   margin: 0;
 }
+.m8 {
+  margin: 8px;
+}
 
+.mb-5 {
+  margin-bottom: 15px;
+}
+.mt-8 {
+  margin-top: 8px;
+}
 .f2 {
   font-size: 2rem;
 }
@@ -40,4 +49,27 @@ body {
   font-family: "Font2", sans-serif;
   cursor: pointer;
   height: fit-content;
+}
+.font4 {
+  font-family: "Font4", sans-serif;
+}
+
+.form-button {
+  padding: 5px 25px 5px 25px;
+  border-radius: 0.5rem;
+  border: 1px solid #aeaeae;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+.form-button:hover {
+  background-color: #104911;
+  color: #f7f4f3;
+  border: 1px solid #f7f4f3;
+}
+
+.input-field {
+  padding: 8px 5px 8px 5px;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid #aeaeae;
 }

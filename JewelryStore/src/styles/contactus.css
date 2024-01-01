@@ -64,16 +64,3 @@
   border-radius: 0.5rem;
   border: 1px solid #aeaeae;
 }
-
-.contact-form-button {
-  padding: 5px 25px 5px 25px;
-  border-radius: 0.5rem;
-  border: 1px solid #aeaeae;
-  transition: all 0.8s;
-  cursor: pointer;
-}
-.contact-form-button:hover {
-  background-color: #cca000;
-  color: #f7f4f3;
-  border: 1px solid #f7f4f3;
-}

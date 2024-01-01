@@ -56,7 +56,7 @@ export default function ContactUs() {
               />
             </div>
           </div>
-          <button className="contact-form-button">Contact Us</button>
+          <button className="form-button">Contact Us</button>
         </form>
       </div>
     </div>

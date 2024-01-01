@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import rings from "../assets/rings2.mp4";
+import rings from "../assets/landing-vid-3.mp4";
 function LandingPage() {
   return (
     <div className="landing-main-container">

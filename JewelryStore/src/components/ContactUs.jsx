@@ -36,6 +36,7 @@ export default function ContactUs() {
             <div className="input-container">
               <label>Interested In:</label>
               <select id="choice" className="input-field">
+                <option value="">Select Option</option>
                 <option value="">Wedding Rings</option>
                 <option value="">Engagement Rings</option>
                 <option value="">Jewelry</option>
@@ -47,7 +48,7 @@ export default function ContactUs() {
             <div className="input-container area">
               <label>Message:</label>
               <textarea
-                className="input-field"
+                className="input-field area"
                 rows={5}
                 cols={10}
                 type="text"

@@ -66,16 +66,19 @@ export default function Navbar() {
       // ENGAGEMENT:
     } else if (link === "Engagement Rings") {
       setIsDesignerDropdownActive(false);
+      setIsOurCompanyDropdownActive(false);
       setIsServiceDropdownActive(false);
       navigate("/engagement");
       //WEDDING:
     } else if (link === "Wedding Rings") {
       setIsDesignerDropdownActive(false);
+      setIsOurCompanyDropdownActive(false);
       setIsServiceDropdownActive(false);
       navigate("/wedding");
       //JEWELRY:
     } else if (link === "Jewelry") {
       setIsDesignerDropdownActive(false);
+      setIsOurCompanyDropdownActive(false);
       setIsServiceDropdownActive(false);
       navigate("/jewelry");
     }
@@ -135,6 +138,24 @@ export default function Navbar() {
       });
     }
   }, [isDesignerDropdownActive, isServiceDropdownActive]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDesignerDropdownActive(false);
+        setIsOurCompanyDropdownActive(false);
+        setIsServiceDropdownActive(false);
+      }
+    };
+
+    // Attach the event listener to the document
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
 
   const renderDropdownOptions = (options) => {
     return (

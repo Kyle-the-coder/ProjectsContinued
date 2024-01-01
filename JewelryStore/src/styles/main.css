@@ -45,10 +45,21 @@ body {
   cursor: pointer;
 }
 
+.text-center {
+  text-align: center;
+}
 .font1 {
-  font-family: "Font2", sans-serif;
+  font-family: "Font1", sans-serif;
+}
+.font1.extra {
   cursor: pointer;
   height: fit-content;
+}
+.font2 {
+  font-family: "Font2", sans-serif;
+}
+.font3 {
+  font-family: "Font3", sans-serif;
 }
 .font4 {
   font-family: "Font4", sans-serif;

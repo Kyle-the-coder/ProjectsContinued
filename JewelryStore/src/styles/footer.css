@@ -13,5 +13,42 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  border-right: 1px solid black;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  height: 25px;
+  font-family: "Font1", sans-serif;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 2px 0px 2px 0px;
+}
+.footer-link {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-link:hover {
+  color: #cca000;
+}
+
+.footer-socials-container {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-png {
+  width: 75px;
+  height: 75px;
+}
+.footer-award-container {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
 }

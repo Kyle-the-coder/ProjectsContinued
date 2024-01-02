@@ -1,5 +1,7 @@
 import Banner from "../components/Banner";
 import rings from "../assets/wedding-rings-display.jpg";
+import WeddingRingDisplay from "../components/WeddingRingDisplay";
+
 function WeddingPage() {
   return (
     <div className="landing-main-container">
@@ -10,6 +12,7 @@ function WeddingPage() {
         side={false}
         position="0 27%"
       />
+      <WeddingRingDisplay />
       <div></div>
     </div>
   );

@@ -22,7 +22,7 @@ export default function CarouselComponent() {
               "q2nVuHy0uK8zolsVcRON0rK5pdZ7qvd6Crqtk7MGReVXQdaHl4nBcLQl",
           },
           params: {
-            query: "Jewelry",
+            query: "Men's Wedding Rings",
             orientation: "portrait",
             per_page: 6,
           },
@@ -40,7 +40,7 @@ export default function CarouselComponent() {
     <img
       src={prevButtonImage}
       alt="Previous"
-      className="custom-slick-arrow custom-slick-prev jewelry-arrow"
+      className="custom-slick-arrow custom-slick-prev jewelry-arrow left"
       onClick={props.onClick}
     />
   );
@@ -49,7 +49,7 @@ export default function CarouselComponent() {
     <img
       src={nextButtonImage}
       alt="Next"
-      className="custom-slick-arrow custom-slick-next jewelry-arrow"
+      className="custom-slick-arrow custom-slick-next jewelry-arrow right"
       onClick={props.onClick}
     />
   );

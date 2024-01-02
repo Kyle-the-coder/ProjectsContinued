@@ -209,8 +209,8 @@ export default function Navbar() {
             }}
           >
             <img src={logo} />
-            <p className="f1-5">Timothy Patrick Jewelers</p>
-            <p>Est. 2009</p>
+            <p style={{ fontSize: "1.2rem" }}>Timothy Patrick Jewelers</p>
+            <p className="f-8 ">Est. 2009</p>
           </div>
           <div className="navbar-info-socials">
             <img src={insta} />

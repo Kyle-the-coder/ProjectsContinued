@@ -1,0 +1,18 @@
+.wedding-main-container {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.wedding-carousel-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wedding-display-container {
+  width: 50%;
+}

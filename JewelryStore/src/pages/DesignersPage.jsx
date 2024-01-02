@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import greenRing from "../assets/rings-green-display.jpg";
-import DesignerDisplay from "../components/DesignerDisplay";
+
 function DesignersPage() {
   return (
     <div className="engagement-main-container">
@@ -11,8 +11,6 @@ function DesignersPage() {
         side={true}
         position="0 47%"
       />
-      <DesignerDisplay />
-      <div></div>
     </div>
   );
 }

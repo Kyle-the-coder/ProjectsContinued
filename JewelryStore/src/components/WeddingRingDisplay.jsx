@@ -7,7 +7,7 @@ export default function WeddingRingDisplay({}) {
         <CarouselComponent />
       </div>
       <div className="wedding-display-container">
-        <h1 className="font4">Men's Wedding Rings</h1>
+        <h1 className="font4">Your Wedding Experience</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
           fermentum justo eget nisl dapibus, nec venenatis justo malesuada.

@@ -1,0 +1,113 @@
+.designer-display-main-container {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid #aeaeae;
+}
+.designer-display-main-container.top {
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+}
+.designer-display-main-container.bottom {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  border: none;
+}
+
+.designer-display-top-container {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  padding: 40px 10px 20px 10px;
+}
+
+.designer-display-left-top {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.designer-display-right-top {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.designer-display-img-container {
+  width: fit-content;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.designer-display-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.designer-display-mid-container {
+  width: 100%;
+  height: 230px;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+.designer-display-product-container {
+  width: 150px;
+  height: 100%;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.designer-product-img {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.designer-product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: antiquewhite;
+}
+.designer-product-display {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.product-text {
+  font-size: 0.6rem;
+}
+
+.designer-display-bottom-container {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-button {
+  padding: 5px 15px 5px 15px;
+  border-radius: 0.5rem;
+  border: 1px solid #aeaeae;
+  transition: all 0.8s;
+  cursor: pointer;
+  font-size: 0.6rem;
+}
+.product-button:hover {
+  background-color: #104911;
+  color: #f7f4f3;
+  border: 1px solid #f7f4f3;
+}

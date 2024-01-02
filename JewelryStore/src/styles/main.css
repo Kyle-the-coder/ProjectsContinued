@@ -83,6 +83,11 @@ body {
   color: #f7f4f3;
   border: 1px solid #f7f4f3;
 }
+.form-button.gold:hover {
+  background-color: #cca000;
+  color: #f7f4f3;
+  border: 1px solid #f7f4f3;
+}
 
 .input-field {
   padding: 8px 5px 8px 5px;

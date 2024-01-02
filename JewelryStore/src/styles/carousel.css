@@ -69,12 +69,14 @@
 .custom-slick-next {
   right: -50px; /* Adjust the right position for the next arrow */
 }
-
-.thumbnail-container {
+/* 
+.thumbnail-list {
+  width: 80%;
+  background-color: #a5f2f4;
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
+  justify-content: space-between;
+  overflow: hidden;
+} */
 
 .thumbnail {
   width: 50px;

@@ -6,13 +6,16 @@
 }
 
 .footer-container {
-  width: 25%;
+  width: 22.3%;
   height: 100%;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+.footer-container.bigger {
+  width: 35%;
 }
 
 .footer-list {

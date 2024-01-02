@@ -13,9 +13,9 @@ export function Footer() {
   ];
   return (
     <div className="footer-main-container">
-      <div className="footer-container">
+      <div className="footer-container bigger">
         <h3 className="text-center font4 f2">The Timothy Patrick Difference</h3>
-        <p className="text-center m0 font2 f-8">
+        <p className="text-center mb-5 m0 px-10 font2 f-8">
           We embrace the principles of the American Gem Society where business
           ethics and professionalism are a key measure of success.
         </p>
@@ -26,12 +26,12 @@ export function Footer() {
         </div>
       </div>
       <div className="footer-container">
-        <h3 className="font1">Explore</h3>
-        <ul className="footer-list">
+        <h3 className="font1 f-8 mt-15">Explore</h3>
+        <ul className="footer-list ">
           {footerLinks.map((link) => {
             return (
               <li className={link.linkName}>
-                <a className="footer-link" href={link.link}>
+                <a className="footer-link f-8" href={link.link}>
                   {link.linkName}
                 </a>
               </li>
@@ -40,14 +40,16 @@ export function Footer() {
         </ul>
       </div>
       <div className="footer-container">
-        <h3 className="font1">Locations:</h3>
-        <p className="font1 text-center">
+        <h3 className="font1 f-8 mt-15">Locations:</h3>
+        <p className="font1 text-center f-8">
           647 4th St, Santa Rosa, CA 95404
         </p>{" "}
-        <p className="font1 text-center">647 4th St, Santa Rosa, CA 95404</p>{" "}
+        <p className="font1 text-center  f-8">
+          647 4th St, Santa Rosa, CA 95404
+        </p>{" "}
       </div>
       <div className="footer-container">
-        <h3 className="font1">Follow</h3>
+        <h3 className="font1  f-8 mt-15">Follow</h3>
         <div className="footer-socials-container">
           <img src={insta} width="25" />
           <img src={fb} width="25" />

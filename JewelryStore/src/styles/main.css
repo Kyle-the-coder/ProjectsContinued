@@ -23,12 +23,18 @@ body {
 .m8 {
   margin: 8px;
 }
+.px-10 {
+  padding: 0px 15px 0px 15px;
+}
 
 .mb-5 {
   margin-bottom: 15px;
 }
 .mt-8 {
   margin-top: 8px;
+}
+.mt-15 {
+  margin-top: 20%;
 }
 .f2 {
   font-size: 2rem;

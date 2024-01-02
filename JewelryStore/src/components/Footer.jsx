@@ -30,7 +30,7 @@ export function Footer() {
         <ul className="footer-list ">
           {footerLinks.map((link) => {
             return (
-              <li className={link.linkName}>
+              <li key={link.linkName}>
                 <a className="footer-link f-8" href={link.link}>
                   {link.linkName}
                 </a>

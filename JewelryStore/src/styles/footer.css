@@ -3,6 +3,7 @@
   height: 400px;
   background-color: rgb(18, 18, 18);
   display: flex;
+  border-radius: 0.5rem;
 }
 
 .footer-container {

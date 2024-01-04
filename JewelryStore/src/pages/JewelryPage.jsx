@@ -2,7 +2,7 @@ import Banner from "../components/Banner";
 import tripleRing from "../assets/triple-ring-display.jpg";
 function JewelryPage() {
   return (
-    <div className="engagement-main-container">
+    <div className="jewelry-main-container">
       <Banner
         img={tripleRing}
         title="Jewelry"
@@ -10,6 +10,8 @@ function JewelryPage() {
         side={true}
         position="0 47%"
       />
+      <div className="jewelry-filter-container"></div>
+      <div className="grid-main-container"></div>
       <div></div>
     </div>
   );

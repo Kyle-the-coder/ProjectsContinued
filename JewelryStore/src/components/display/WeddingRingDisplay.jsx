@@ -7,7 +7,10 @@ export default function WeddingRingDisplay({}) {
         <CarouselComponent />
       </div>
       <div className="wedding-display-container">
-        <h1 className="font4">Your Wedding Experience</h1>
+        <h1 className="font4">
+          Your <span className="font-gold">W</span>edding{" "}
+          <span className="font-green">E</span>xperience
+        </h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
           fermentum justo eget nisl dapibus, nec venenatis justo malesuada.

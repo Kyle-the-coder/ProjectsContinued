@@ -3,6 +3,7 @@ import tripleRing from "../assets/triple-ring-display.jpg";
 import { productInfo } from "../api/product";
 import "../styles/jewelrypage.css";
 import { useEffect, useState } from "react";
+import Loader from "../components/display/loader";
 function JewelryPage() {
   const [prodInfo, setProdInfo] = useState(productInfo);
   const [productGrid, setProductGrid] = useState(prodInfo);
@@ -10,7 +11,9 @@ function JewelryPage() {
   const [typeSearch, setTypeSearch] = useState("");
   const [minSearch, setMinSearch] = useState(null);
   const [maxSearch, setMaxSearch] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
+    setIsLoading(true);
     const applyFilters = () => {
       let filteredData = productInfo;
 
@@ -51,11 +54,13 @@ function JewelryPage() {
 
       setProductGrid(filteredData);
     };
-
-    applyFilters();
+    setTimeout(() => {
+      applyFilters();
+      setIsLoading(false);
+    }, 2000);
   }, [materialSearch, minSearch, maxSearch, productInfo, typeSearch]);
 
-  console.log(typeSearch);
+  console.log(isLoading);
   return (
     <div className="jewelry-main-container">
       <Banner
@@ -120,28 +125,33 @@ function JewelryPage() {
           </select>
         </div>
       </div>
-      <div className="grid-main-container">
-        <div className="img-grid">
-          {productGrid.map((prod, index) => {
-            return (
-              <div
-                className="designer-display-product-container big"
-                key={prod.prodImg}
-              >
-                <div className="designer-product-img">
-                  <img src={prod.prodImg} />
-                </div>
-                <div className="designer-product-display">
-                  <h3 className="product-text">{prod.prodName}</h3>
-                  <p className="product-text">{`$${prod.prodPrice}`}</p>
-                </div>
-                <button className="product-button ">Inuire Now</button>
-              </div>
-            );
-          })}
+      {isLoading ? (
+        <div className="loader-main-container">
+          <Loader />
         </div>
-      </div>
-      <div></div>
+      ) : (
+        <div className="grid-main-container">
+          <div className="img-grid">
+            {productGrid.map((prod, index) => {
+              return (
+                <div
+                  className="designer-display-product-container big"
+                  key={prod.prodImg}
+                >
+                  <div className="designer-product-img">
+                    <img src={prod.prodImg} />
+                  </div>
+                  <div className="designer-product-display">
+                    <h3 className="product-text">{prod.prodName}</h3>
+                    <p className="product-text">{`$${prod.prodPrice}`}</p>
+                  </div>
+                  <button className="product-button ">Inuire Now</button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

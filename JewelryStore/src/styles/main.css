@@ -101,3 +101,10 @@ body {
   border-radius: 0.2rem;
   border: 1px solid #aeaeae;
 }
+
+.font-green {
+  color: #104911;
+}
+.font-gold {
+  color: #cca000;
+}

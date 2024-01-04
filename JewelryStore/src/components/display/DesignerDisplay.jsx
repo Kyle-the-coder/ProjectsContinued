@@ -10,6 +10,8 @@ export default function DesignerDisplay({
   bottom,
 }) {
   const [designerName, setDesignerName] = useState(name);
+  const firstChar = name.charAt(0);
+  const restOfName = name.slice(1);
 
   return (
     <div
@@ -25,7 +27,26 @@ export default function DesignerDisplay({
     >
       <div className="designer-display-top-container">
         <div className="designer-display-left-top">
-          <h1 className="font4 f2 m0">{name}</h1>
+          <h1 className="font4 f2 m0">
+            {name.split("").map((char, index) => {
+              let color = "black";
+              // Check conditions for gold and green colors
+              if (index === 0 && char.match(/[A-Za-z]/)) {
+                color = "#cca000";
+              } else if (
+                index > 0 &&
+                index === name.lastIndexOf(" ") + 1 &&
+                char.match(/[A-Za-z]/)
+              ) {
+                color = "#104911";
+              }
+              return (
+                <span key={index} style={{ color }}>
+                  {char}
+                </span>
+              );
+            })}
+          </h1>
           <p>{desc}</p>
         </div>
         <div className="designer-display-right-top">

@@ -21,3 +21,11 @@
 .designer-desc-container p {
   width: 80%;
 }
+
+.designer-underline {
+  width: 90%;
+  height: 3px;
+  background-color: black;
+  margin-top: 5%;
+  border-radius: 0.5rem;
+}

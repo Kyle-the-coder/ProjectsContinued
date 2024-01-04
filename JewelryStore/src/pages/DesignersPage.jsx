@@ -53,6 +53,7 @@ function DesignersPage() {
           facilisis. Sed fringilla velit at turpis aliquam, nec vestibulum
           libero ullamcorper.
         </p>
+        <div className="designer-underline"></div>
       </div>
       <DesignerDisplay
         name="Sophia Sterling"

@@ -1,4 +1,4 @@
-import Banner from "../components/Banner";
+import Banner from "../components/pageDesign/Banner";
 import darkRing from "../assets/ring-dark-display.jpg";
 function EngagementPage() {
   return (

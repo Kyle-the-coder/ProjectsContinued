@@ -1,6 +1,5 @@
-import "../styles/designerdisplay.css";
-import plug from "../assets/ring-ball.jpeg";
-import green from "../assets/ring-drop-green.jpeg";
+import "../../styles/designerdisplay.css";
+
 import { useState } from "react";
 export default function DesignerDisplay({
   name,

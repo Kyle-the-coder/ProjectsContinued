@@ -1,5 +1,5 @@
-import CarouselComponent from "./carousel/CarouselComponent";
-import "../styles/weddingdisplay.css";
+import CarouselComponent from "../carousel/CarouselComponent";
+import "../../styles/weddingdisplay.css";
 export default function WeddingRingDisplay({}) {
   return (
     <div className="wedding-main-container">

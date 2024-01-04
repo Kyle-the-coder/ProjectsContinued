@@ -1,6 +1,6 @@
-import Banner from "../components/Banner";
+import Banner from "../components/pageDesign/Banner";
 import rings from "../assets/wedding-rings-display.jpg";
-import WeddingRingDisplay from "../components/WeddingRingDisplay";
+import WeddingRingDisplay from "../components/display/WeddingRingDisplay";
 
 function WeddingPage() {
   return (

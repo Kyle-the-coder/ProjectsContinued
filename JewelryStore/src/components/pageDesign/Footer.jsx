@@ -1,9 +1,9 @@
-import "../styles/footer.css";
-import insta from "../assets/instagram2.png";
-import fb from "../assets/facebook2.png";
-import diamond from "../assets/diamond.png";
-import diamondA from "../assets/diamond-award.png";
-import trophy from "../assets/trophy.png";
+import "../../styles/footer.css";
+import insta from "../../assets/instagram2.png";
+import fb from "../../assets/facebook2.png";
+import diamond from "../../assets/diamond.png";
+import diamondA from "../../assets/diamond-award.png";
+import trophy from "../../assets/trophy.png";
 export function Footer() {
   const footerLinks = [
     { linkName: "Our Company", link: "/company" },

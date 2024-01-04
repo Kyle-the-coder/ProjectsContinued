@@ -1,7 +1,7 @@
-import "../styles/navbar.css";
-import logo from "../assets/j-store-logo.jpeg";
-import insta from "../assets/instagram2.png";
-import fb from "../assets/facebook2.png";
+import "../../styles/navbar.css";
+import logo from "../../assets/j-store-logo.jpeg";
+import insta from "../../assets/instagram2.png";
+import fb from "../../assets/facebook2.png";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useNavigate } from "react-router-dom";

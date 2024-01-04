@@ -1,4 +1,4 @@
-import Banner from "../components/Banner";
+import Banner from "../components/pageDesign/Banner";
 import rings from "../assets/landing-vid-3.mp4";
 function LandingPage() {
   return (

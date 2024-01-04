@@ -1,8 +1,8 @@
 import { Outlet, useNavigation } from "react-router-dom";
-import ContactUs from "../components/ContactUs";
-import { Footer } from "../components/Footer";
-import Navbar from "../components/Navbar";
-import NewsLetter from "../components/NewsLetter";
+import ContactUs from "../components/pageDesign/ContactUs";
+import { Footer } from "../components/pageDesign/Footer";
+import Navbar from "../components/pageDesign/Navbar";
+import NewsLetter from "../components/pageDesign/NewsLetter";
 
 export function ErrorLayout() {
   return (

@@ -1,4 +1,4 @@
-import Banner from "../components/Banner";
+import Banner from "../components/pageDesign/Banner";
 import tripleRing from "../assets/triple-ring-display.jpg";
 import { productInfo } from "../api/product";
 import "../styles/jewelrypage.css";
@@ -7,13 +7,25 @@ function JewelryPage() {
   const [prodInfo, setProdInfo] = useState(productInfo);
   const [productGrid, setProductGrid] = useState(prodInfo);
   const [materialSearch, setMaterialSearch] = useState("");
+  const [typeSearch, setTypeSearch] = useState("");
   const [minSearch, setMinSearch] = useState(null);
   const [maxSearch, setMaxSearch] = useState(null);
   useEffect(() => {
     const applyFilters = () => {
       let filteredData = productInfo;
 
-      // Apply material filter
+      // Jewelry Type filter
+      if (typeSearch === "necklace") {
+        filteredData = filteredData.filter((prod) =>
+          prod.description.includes("necklace")
+        );
+      } else if (typeSearch === "ring") {
+        filteredData = filteredData.filter((prod) =>
+          prod.description.includes("ring")
+        );
+      }
+
+      // Material filter
       if (materialSearch === "gold") {
         filteredData = filteredData.filter((prod) =>
           prod.description.includes("gold")
@@ -24,7 +36,7 @@ function JewelryPage() {
         );
       }
 
-      // Apply min and max price filters
+      // Min and max price filters
       if (minSearch) {
         filteredData = filteredData.filter(
           (prod) => parseFloat(prod.prodPrice) >= parseFloat(minSearch)
@@ -41,8 +53,9 @@ function JewelryPage() {
     };
 
     applyFilters();
-  }, [materialSearch, minSearch, maxSearch, productInfo]);
+  }, [materialSearch, minSearch, maxSearch, productInfo, typeSearch]);
 
+  console.log(typeSearch);
   return (
     <div className="jewelry-main-container">
       <Banner
@@ -82,10 +95,14 @@ function JewelryPage() {
         </div>
         <div className="jewelry-filter-container select">
           <label className="font2 f-8">Jewelry Type</label>
-          <select className="input-field small">
+          <select
+            className="input-field small"
+            onChange={(e) => setTypeSearch(e.target.value)}
+          >
             <option>Select One...</option>
-            <option>Necklace</option>
-            <option>Rings</option>
+            <option value="all">All</option>
+            <option value="necklace">Necklace</option>
+            <option value="ring">Rings</option>
           </select>
         </div>
         <div className="jewelry-filter-container select">

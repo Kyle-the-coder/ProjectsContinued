@@ -1,6 +1,6 @@
-import "../styles/newsletter.css";
-import "../styles/main.css";
-import logo from "../assets/j-store-logo.jpeg";
+import "../../styles/newsletter.css";
+import "../../styles/main.css";
+import logo from "../../assets/j-store-logo.jpeg";
 export default function NewsLetter() {
   return (
     <div className="newsletter-main-container">

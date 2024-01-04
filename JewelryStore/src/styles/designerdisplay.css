@@ -70,6 +70,15 @@
   justify-content: center;
   align-items: center;
 }
+.designer-display-product-container.big {
+  width: 220px;
+  height: 100%;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .designer-product-img {
   width: 100%;
   border-radius: 0.5rem;
@@ -79,7 +88,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: antiquewhite;
+  transition: all 0.5s;
+}
+.designer-product-img img:hover {
+  transform: scale(1.2);
 }
 .designer-product-display {
   width: 100%;

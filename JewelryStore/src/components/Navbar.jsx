@@ -44,7 +44,7 @@ export default function Navbar() {
       setIsDesignerDropdownActive(true);
       setIsServiceDropdownActive(false);
       setIsOurCompanyDropdownActive(false);
-      const dropdownTop = 162;
+      const dropdownTop = 146;
       const dropdownLeft = index * 18.8;
       setDesignerDropdownPosition({ top: dropdownTop, left: dropdownLeft });
       // SERVICES:
@@ -52,7 +52,7 @@ export default function Navbar() {
       setIsServiceDropdownActive(true);
       setIsDesignerDropdownActive(false);
       setIsOurCompanyDropdownActive(false);
-      const dropdownTop = 162;
+      const dropdownTop = 146;
       const dropdownLeft = index * 17.5;
       setServiceDropdownPosition({ top: dropdownTop, left: dropdownLeft });
       // OUR COMPANY:
@@ -60,7 +60,7 @@ export default function Navbar() {
       setIsOurCompanyDropdownActive(true);
       setIsDesignerDropdownActive(false);
       setIsServiceDropdownActive(false);
-      const dropdownTop = 162;
+      const dropdownTop = 146;
       const dropdownLeft = index * 16.7;
       setOurCompanyDropdownPosition({ top: dropdownTop, left: dropdownLeft });
       // ENGAGEMENT:

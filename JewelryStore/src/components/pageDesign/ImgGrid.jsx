@@ -9,9 +9,9 @@ const ImgGrid = () => {
   const [images2, setImages2] = useState([]);
   const [images3, setImages3] = useState([]);
   const [loading, setLoading] = useState(true);
-  const imgArr1 = ["Streets", "Tigers", "Skyscrapers", "Portraits"];
-  const imgArr2 = ["Sun", "Space", "Fire", "Silly"];
-  const imgArr3 = ["Flowers", "Water", "Cyclone", "Love"];
+  const imgArr1 = ["Bridal event", "Wedding Dress", "Engagement"];
+  const imgArr2 = ["Rings", "Necklace", "Diamonds"];
+  const imgArr3 = ["Wedding", "Marriage", "Couple"];
 
   function findArr(arr) {
     const ranIndex = Math.floor(Math.random() * arr.length);
@@ -31,7 +31,7 @@ const ImgGrid = () => {
             Authorization: apiKey,
           },
           params: {
-            query: "Jewelry",
+            query: findArr(imgArr1),
             orientation: "portrait",
             per_page: 6,
           },
@@ -67,13 +67,13 @@ const ImgGrid = () => {
         setTimeout(() => {
           setLoading(false);
           gsap.to(".img-grid-display", {
-            duration: 45.2,
+            duration: 100.2,
             yPercent: -100,
             ease: "slow(0.3,0.4,false)",
             delay: 0.5,
           });
           gsap.to(".img-grid-display-reverse", {
-            duration: 45.2,
+            duration: 100.2,
             yPercent: 80,
             ease: "slow(0.3,0.4,false)",
             delay: 0.5,
@@ -106,7 +106,7 @@ const ImgGrid = () => {
                 <img
                   key={image.id}
                   id="forward"
-                  src={image.src.medium}
+                  src={image.src.large}
                   alt={image.photographer}
                   className="img-display-img"
                 />
@@ -117,7 +117,7 @@ const ImgGrid = () => {
                 <img
                   key={image.id}
                   id="reverse"
-                  src={image.src.medium}
+                  src={image.src.large}
                   alt={image.photographer}
                   className="img-display-img"
                 />
@@ -128,7 +128,7 @@ const ImgGrid = () => {
                 <img
                   key={image.id}
                   id="forward"
-                  src={image.src.medium}
+                  src={image.src.large}
                   alt={image.photographer}
                   className="img-display-img"
                 />

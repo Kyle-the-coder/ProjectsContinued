@@ -131,7 +131,7 @@ function JewelryPage() {
         </div>
       ) : (
         <div className="grid-main-container">
-          <div className="img-grid">
+          <div className="img-grid-2">
             {productGrid.map((prod, index) => {
               return (
                 <div

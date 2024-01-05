@@ -44,6 +44,7 @@ function JewelryPage() {
         filteredData = filteredData.filter(
           (prod) => parseFloat(prod.prodPrice) >= parseFloat(minSearch)
         );
+        filteredData.sort((a, b) => a.prodPrice - b.prodPrice);
       }
 
       if (maxSearch) {
@@ -54,13 +55,12 @@ function JewelryPage() {
 
       setProductGrid(filteredData);
     };
+    applyFilters();
     setTimeout(() => {
-      applyFilters();
       setIsLoading(false);
     }, 2000);
   }, [materialSearch, minSearch, maxSearch, productInfo, typeSearch]);
 
-  console.log(isLoading);
   return (
     <div className="jewelry-main-container">
       <Banner

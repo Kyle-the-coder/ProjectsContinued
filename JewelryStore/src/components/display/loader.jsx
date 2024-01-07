@@ -1,5 +1,5 @@
 import "../../styles/loader.css";
 
 export default function Loader() {
-  return <div class="spinner"></div>;
+  return <div className="spinner"></div>;
 }

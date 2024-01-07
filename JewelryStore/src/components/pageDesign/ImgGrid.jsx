@@ -9,9 +9,9 @@ const ImgGrid = () => {
   const [images2, setImages2] = useState([]);
   const [images3, setImages3] = useState([]);
   const [loading, setLoading] = useState(true);
-  const imgArr1 = ["Bridal event", "Wedding Dress", "Engagement"];
-  const imgArr2 = ["Rings", "Necklace", "Diamonds"];
-  const imgArr3 = ["Wedding", "Marriage", "Couple"];
+  const imgArr1 = ["Sapphire Ring", "Engagement"];
+  const imgArr2 = ["Rings", "Diamonds"];
+  const imgArr3 = ["Wedding", "Couple"];
 
   function findArr(arr) {
     const ranIndex = Math.floor(Math.random() * arr.length);
@@ -67,13 +67,13 @@ const ImgGrid = () => {
         setTimeout(() => {
           setLoading(false);
           gsap.to(".img-grid-display", {
-            duration: 100.2,
+            duration: 75.2,
             yPercent: -100,
             ease: "slow(0.3,0.4,false)",
             delay: 0.5,
           });
           gsap.to(".img-grid-display-reverse", {
-            duration: 100.2,
+            duration: 75.2,
             yPercent: 80,
             ease: "slow(0.3,0.4,false)",
             delay: 0.5,

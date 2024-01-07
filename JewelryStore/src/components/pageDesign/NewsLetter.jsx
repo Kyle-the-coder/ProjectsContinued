@@ -7,7 +7,7 @@ export default function NewsLetter() {
       <div className="newsletter-top-sign-up-container">
         <form className="newsletter-subscribe-form">
           <div style={{ width: "100%" }}>
-            <label>Email:</label>
+            <label className="font1">Email:</label>
             <input
               placeholder="Sign up for our newsletter"
               type="text"

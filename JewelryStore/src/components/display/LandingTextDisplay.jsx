@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 export default function LandingTextDisplay() {
+  const navigate = useNavigate();
   return (
     <div className="landing-text-display-main-container">
       <h1 className="font1 f2">
-        A <span className="font-gold">G</span>ift of a{" "}
-        <span className="font-light-green">M</span>oment
+        A Gift of a Moment that <span className="font-gold">L</span>asts{" "}
+        <span className="font-light-green">F</span>orever
       </h1>
       <p className="f-8 font2">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -13,6 +16,9 @@ export default function LandingTextDisplay() {
         facilisis. Sed fringilla velit at turpis aliquam, nec vestibulum libero
         ullamcorper.
       </p>
+      <button className="form-button" onClick={() => navigate("/jewelry")}>
+        See Jewelry
+      </button>
     </div>
   );
 }
